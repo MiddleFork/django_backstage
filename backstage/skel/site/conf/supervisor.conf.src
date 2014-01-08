@@ -1,0 +1,10 @@
+[program:%(site_name)s]
+directory = /data/www/dosie/sites/%(site_name)s/
+user = www-data
+command = /data/www/dosie/sites/%(site_name)s/conf/gunicorn_launcher
+autostart=true
+autorestart=true
+
+stdout_logfile = /var/log/supervisor/%(site_name)s.log
+stderr_logfile = /var/log/supervisor/%(site_name)s-err.log
+

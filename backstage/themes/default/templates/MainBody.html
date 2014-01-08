@@ -1,0 +1,26 @@
+{% load mezzanine_tags %}
+{% load pages_tags %}
+
+{% comment %}
+Base template for the Main Body of a bootstrap page.
+Basically an empty container.  Content should include its own
+formatting (row/span/panel, etc.)
+{% endcomment %}
+
+<div class="container">
+{#  <div class="row"> #}
+{#    <div class="col-lg-12 col-md-12 col-sm-12"> #}
+{#      <div class="panel"> #}
+
+{% comment %}
+
+        {% editable page.richtextpage.content %}
+        {{ page.richtextpage.content|richtext_filter|safe }}
+        {% endeditable %}
+
+{% endcomment %}
+
+{#      </div><!-- panel --> #}
+{#    </div><!-- span12 --> #}
+{#  </div><!-- row --> #}
+</div><!-- container -->

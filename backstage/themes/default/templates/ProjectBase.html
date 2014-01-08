@@ -1,0 +1,51 @@
+{% block Tags %}
+{% load mezzanine_tags %}
+{% load pages_tags %}
+{% endblock Tags %}
+{% block extra_tags %}
+{% endblock extra_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+{% if csettings.DEBUG %}
+<META HTTP-EQUIV="CACHE-CONTROL" content="max-age=0" />
+<meta http-equiv="CACHE-CONTROL" content="no-cache" />
+<meta http-equiv="EXPIRES" content="0" />
+<meta http-equiv="PRAGMA" content="no-cache" />
+{% endif %}
+<title>{{ page.title }} - {{ csettings.SITE_NAME }}</title>
+
+{# default CSS and JS includes.  Empty versions are placed in the project templates folder to avoid 'include' errors #}
+{% block Head %}
+{% include "ProjectCSS.html" %}
+{% include "ThemeCSS.html" %}
+{% include "SiteCSS.html" %}
+{% include "ProjectJS.html" %}
+{% include "ThemeJS.html" %}
+{% include "SiteJS.html" %}
+{% endblock Head %}
+</head>
+<body style="background-color:#ffffe0;" {% block BodyArgs %}{% endblock BodyArgs %}>
+{% block TopBar %}
+{% include "TopBar.html" %}
+{% endblock TopBar %}
+{% block TopBanner %}
+{% include "TopBanner.html" %}
+{% endblock TopBanner %}
+{% block Header %}
+{% include "Header.html" %} 
+{% endblock Header %}
+{% block Main %}
+{% include "MainBody.html" %}
+{% endblock Main %}
+{% block Footer %}
+{% include "Footer.html" %}
+{% endblock Footer %}
+{% block foot_tags %}
+{% endblock foot_tags %}
+{% block mezzanine_foot_tags %}
+{% editable_loader %}
+{% endblock mezzanine_foot_tags %}
+</body>
+</html>
+

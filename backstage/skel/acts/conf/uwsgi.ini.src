@@ -1,0 +1,6 @@
+[uwsgi]
+master = true
+processes = 4
+home = %(PROJECT_ROOT)/project/virtualenv # Path to virtual environment,
+pythonpath = %(PROJECT_ROOT) # Path to project
+

@@ -1,0 +1,24 @@
+#!/bin/bash
+set -e
+  DJANGO_DIR=/data/www/dosie #location of the root of our django app
+  LOGFILE=/var/log/gunicorn/%(site_name)s.log
+  LOGDIR=$(dirname $LOGFILE)
+  NUM_WORKERS=3
+  # user/group to run as
+  USER=www-data
+  GROUP=www-data
+  test -d $LOGDIR || mkdir -p $LOGDIR
+  # files get created as root, need to change owner
+  #chown $USER:$GROUP $LOGDIR
+  touch $LOGFILE
+  chown $USER:$GROUP $LOGFILE
+  export PYTHONPATH=`(echo "import sys";echo "print ':'.join(sys.path)")|python`
+  export PYTHONPATH=$DJANGO_DIR:$PYTHONPATH
+  cd $DJANGO_DIR
+  exec /usr/local/bin/gunicorn -w $NUM_WORKERS \
+    --user=$USER --group=$GROUP --log-level=debug \
+    --log-file=$LOGFILE 2>>$LOGFILE \
+    -b 10.100.200.2:%(server_port)s -b 127.0.0.1:%(server_port)s \
+    sites.%(site_name)s.wsgi:application
+
+

@@ -1,0 +1,20 @@
+{% load settings_tags %}
+<div class="navbar navbar-inverse">
+  <div class="navbar-inner" style="background:#040;">
+    <div class="container" >
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="/">{{ settings.SITE_NAME }}</a>
+    <p class="tagline">Site blurb.</p>
+    <div class="nav-collapse">
+        <form action="/search/" class="navbar-search pull-right">
+        <input class="search-query" placeholder="Search" type="text" name="q" value="">
+        </form>
+    </div><!-- nav-collapse -->
+    </div><!-- container -->
+  </div><!-- navbar-inner -->
+</div><!-- navbar navbar-inverse -->
+

@@ -1,0 +1,32 @@
+server
+{
+    server_name %(server_name)s beta.%(server_name)s www.%(server_name)s;
+    listen 66.113.100.140:80;
+    access_log /var/log/nginx/%(site_name)s.log;
+    error_log /var/log/nginx/%(site_name)s.error.log;
+   location /test {
+        alias /data/www/live/test;
+        }
+   location /styles {
+   	alias /data/www/live/styles;
+	}
+   location /images {
+   	alias /data/www/live/images;
+	}
+   location /scripts {
+   	alias /data/www/live/scripts;
+	}
+   location /site {
+   	alias /data/www/content/site/%(site_name)s;
+	}  
+   location / {
+        proxy_pass_header Server;
+        proxy_set_header Host $http_host;
+        proxy_redirect off;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Scheme $scheme;
+        proxy_connect_timeout 10;
+        proxy_read_timeout 10;
+       	proxy_pass http://10.100.200.2:%(server_port)s/;
+    }	
+}

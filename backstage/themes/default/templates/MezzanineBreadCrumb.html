@@ -1,0 +1,6 @@
+{% load pages_tags mezzanine_tags i18n future %}
+<ul class="breadcrumb">
+{% spaceless %}
+{% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
+{% endspaceless %}
+</ul>
