@@ -1,6 +1,6 @@
 import gettext
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost',]
 
 CACHES = {
     'default': {
@@ -48,10 +48,4 @@ STATICFILES_FINDERS = ["django.contrib.staticfiles.finders.FileSystemFinder",
  "compressor.finders.CompressorFinder",]
 
 AUTHENTICATION_BACKENDS =  [ 'django.contrib.auth.backends.ModelBackend',]
-
-try:
-    DEBUG_TOOLBAR_CONFIG['INTERCEPT_REDIRECTS'] = False
-except:
-    DEBUG_TOOLBAR_CONFIG = {}
-    DEBUG_TOOLBAR_CONFIG['INTERCEPT_REDIRECTS'] = False
 

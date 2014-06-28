@@ -1,13 +1,12 @@
-DBENGINE = 'django.db.backends.sqlite3'
+DBENGINE = 'django.db.backends.postgresql_psycopg2'
 DBHOST = '127.0.0.1'
-DBPORT = ''
+DBPORT = 5433
 DBUSER = ''
 DBPASS = ''
-DBNAME = 'db/django_backstage.sq3'
 
 DATABASES = {}
 DATABASES['default'] = {
-    'NAME': DBNAME,
+    'NAME': None,
     'ENGINE': DBENGINE,
     'HOST': DBHOST,
     'PORT': DBPORT,

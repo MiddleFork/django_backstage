@@ -1,121 +1,93 @@
+import os
 from django.db import models
+from django.db.models.signals import pre_init, post_init
+
+class Venue(models.Model):
+    """A backstage Venue is a specific local install of backstage."""
+    venue_name = models.TextField(max_length=80, primary_key=True)
+    venue_path = models.TextField(max_length=255)
+
+    def __init__(self, *args, **kwargs):
+        self.venue_root = os.path.abspath(os.path.join(self.venue_path, self.venue_name))
+    """
+        if not os.path.exists(self.venue_root):
+            print 'venue does not exist at %s' % self.venue_root
+            self = None
+            raise
+        self.uwsgi_ini = os.path.join(self.venue_root, 'backstage-%s-uwsgi.ini' % (self.venue_name))
+        self.acts_dir = os.path.join(self.venue_root, 'acts')
+    """
+
+    def get_settings(self):
+        """ import the venue's settings.py"""
+        try:
+            exec_string = 'from %s import settings' % self.venue_name
+            exec(exec_string)
+            self.settings = settings
+            return True
+        except:
+            raise
+
+    def connect(self):
+        """ connect to the venue database """
+        import psycopg2
+        try:
+            db = self.settings.DATABASES['default']
+            string = "dbname=%s host=%s port=%s user=%s " % \
+                     (db['NAME'],
+                      db['HOST'],
+                      db['PORT'],
+                      db['USER']
+                     )
+            self.conn = psycopg2.connect(string)
+            return True
+        except:
+            return False
+
+    def build_virtualenv(self):
+        """build the virtual environment for this backstage venue"""
+        cwd = os.getcwd()
+        venvdir = os.path.join(self.venue_root,'venv')
+        cmd = '%s/build_virtualenv' % (venvdir)
+        st = os.stat(cmd)
+        os.chmod(cmd, st.st_mode | stat.S_IEXEC)
+        os.chdir(venvdir)
+        subprocess.call(cmd)
+        os.chdir(cwd)
+        return
+
+    def get_uwsgi_port(self):
+        self.uwsgi_ip, self.uwsgi_port = uwsgi_portsniffer.get_uwsgi_port(self.uwsgi_ini)
+        return
+
+    def reload(self):
+        """Reload the Venue, by touching its ini file"""
+        try:
+            with file(self.uwsgi_ini, 'a'):
+                os.utime(self.uwsgi_ini, None)
+        except IOError:
+            print 'Could not update, permission denied.'
+            return
+        self.get_uwsgi_port()
+        return
+
+    def __unicode__(self):
+        s = 'Backstage Venue instance %s at %s' % (self.venue_name, self.venue_root)
+        return s
+
+
 
 
 class Act(models.Model):
-    """An Act is essentially a runnable Django application.   (Runnable, not necessarily Running.)
-    The analogy is a musical Act (performer, ensemble, group, etc.)"""
+    act_name = models.TextField(max_length=80)
+    venue = models.ForeignKey(Venue)
 
-    def __init__(self):
-        pass
 
-    def __unicode__(self):
-        s = ''
-        return s
 
-    class Manager:
-            """Naturally, an Act must have a Manager (act.manager).
-            Think:  Reuben Kincaid (The Partridge Family), Colonel Tom arker (Elvis)."""
-
-            def __init__(self):
-                pass
-
-class Stage(models.Model):
-    """A Stage is an environment in which your Act can run,
-    just as a musical Stage is a physical space where an Act can play music.
-    Here, we will build and use a stage using Virtualenv, uWsgi and Nginx,
-    though we could conceivably fashion a stage using gunicorn/supervisor or something else.
+def populate_venue(sender, *args, **kwargs):
+    """populate the venue upon its instantantiation
+    whether new or per-existent
     """
+    print('foo')
 
-    class Manager:
-        """Our Stage Manager (stage.manager) works with the uWsgi Emperor to start/stop/add/remove/modify Sess(ion)s.
-        Internally, that means working with Apps' uwsgi.ini files;
-        externally, that means the StageManager needs elevated system-level privileges to add/remove links to
-        /etc/uwsgi-emperor/vassals.
-        A properly designed naming scheme for uwsgi.ini files/links will minimize chances for conflicts
-        with other running Backstage instances (Productions).
-        """
-
-        def __init__(self):
-            pass
-
-    class Set(models.Model):
-        """A Stage Set (stage.set) is the collection of installed apps (instruments),
-        styles, scripts (lights and props, etc)
-        """
-
-        def __init__(self):
-            pass
-
-    def __init__(self):
-        pass
-
-    def __unicode__(self):
-        s = ''
-        return s
-
-
-class Sess(models.Model):
-    """A Sess (Session) is an Act playing on a Stage.  It's a Django App running under uWsgi.
-    It exposes a port and/or socket on the local host.  It's like jamming in the garage.
-
-    Sure you're playing music,
-    but (aside from the angry neighbors) nobody in the external world hears or knows about it.
-    (We use the diminutive 'Sess' instead of 'Session' to avoid conflict with Django Sessions).
-    """
-
-    def __init__(self):
-        pass
-
-    def __unicode__(self):
-        s = ''
-        return s
-
-
-class Venue(models.Model):
-    """A Venue is a DNS namespace, such as example.com, or private equivalent. A Venue itself is content-agnostic.
-    If you want, it could display pictures of kittens (if you have a kittens Act)
-    or it could display cupcake recipes (if you have a cupcakes Act).
-    It may contain no content (no Booked Act).
-
-    In the musical world, a Venue is a (public or private) location where people may go to listen to music.
-    Depending on the Act, it could be Jazz on Friday and HipHop on Saturday.  It could be closed on Sunday (no content).
-    """
-
-    def __init__(self):
-        pass
-
-    def __unicode__(self):
-        s = ''
-        return s
-
-
-class Gig(models.Model):
-    """A Gig is a live running website.  It is an Act, Booked and playing a Sess on Stage at a Venue.
-    It is "Live And In Concert."""
-
-    def __init__(self):
-        pass
-
-    def __unicode__(self):
-        s = ''
-        return s
-
-
-class Production(models.Model):
-    """A Production is a single Backstage instance and the superset of its content."""
-
-    class Manager:
-        """The Production Manager has control over the entire Production.
-        Notably, coordinates the activities of the Act, Stage and Booking Managers.
-        An Act doesn't even get to play a jam Sess(ion), let alone have a Gig at a Venue,
-        unless and until the Production Manager says so. """
-
-        def __init__(self):
-            pass
-
-    def __init__(self):
-        pass
-
-    def __unicode__(self):
-        s = ''
-        return s
+post_init.connect(populate_venue, sender=Venue)

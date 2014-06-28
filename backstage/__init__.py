@@ -1,2 +1,1 @@
-from backstage.project import Project, new_project
-from backstage.site import Site
+from backstage.version import __version__

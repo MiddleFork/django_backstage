@@ -23,9 +23,11 @@ MEZZANINE_INSTALLED_APPS = [
 
 MEZZANINE_TEMPLATE_CONTEXT_PROCESSORS = [
     "mezzanine.conf.context_processors.settings",
+    "mezzanine.pages.context_processors.page",
 ]
 
-MEZZANINE_MIDDLEWARE_CLASSES_PREPEND = ["mezzanine.core.middleware.UpdateCacheMiddleware",]
+MEZZANINE_MIDDLEWARE_CLASSES_PREPEND = ["mezzanine.core.middleware.UpdateCacheMiddleware", ]
+
 MEZZANINE_MIDDLEWARE_CLASSES_APPEND = [
     "mezzanine.core.request.CurrentRequestMiddleware",
     "mezzanine.core.middleware.TemplateForDeviceMiddleware",

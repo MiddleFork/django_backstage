@@ -4,25 +4,25 @@ import shutil
 import backstage
 
 class Site():
-    def __init__(self, project_instance, sitename):
+    def __init__(self, venue_instance, sitename):
         """ initialize a site instance, populate it if it doesn't exist """
-        if not isinstance(project_instance, backstage.Project):
-            s = 'The first argument must be an instance of a backstage project'
+        if not isinstance(venue_instance, backstage.venue):
+            s = 'The first argument must be an instance of a backstage venue'
             print s
             raise
         if not isinstance(sitename, str):
             s = 'The second argument must be the name identifying the site'
             print s
             raise
-        self.project = project_instance
-        self.projectfolder = self.project.settings.PROJECT_ROOT
-        #self.PROJECT_NAME = self.project.settings.PROJECT_NAME
+        self.venue = venue_instance
+        self.venuefolder = self.venue.settings.VENUE_ROOT
+        #self.VENUE_NAME = self.venue.settings.VENUE_NAME
         self.sitename = sitename
-        self.sitepath = os.path.join(self.projectfolder, 'sites')
+        self.sitepath = os.path.join(self.venuefolder, 'sites')
         self.sitefolder = os.path.join(self.sitepath, self.sitename)
         self.test_existance()
         if not self.exists:
-            s = 'Site %s does not exist in project %s' % (self.sitename,self.project.PROJECT_NAME)
+            s = 'Site %s does not exist in venue %s' % (self.sitename,self.venue.VENUE_NAME)
             print s
             raise
             #self.create()
@@ -34,7 +34,7 @@ class Site():
 
     def getparams(self):
         """ get site parameters from database """
-        conn = self.project.conn
+        conn = self.venue.conn
         cur = conn.cursor()
         q = "select id,name,domain,alldomains,gunicorn_port,site_db,maintheme,prettyname "
         q += "from django_site where name = '%s'" % (self.sitename)
@@ -66,10 +66,10 @@ class Site():
         if theme is None:
             print 'Theme name required.'
             return False
-        if not theme in self.project.themes:
-            print 'Theme not found, choices are %s' % str(self.project.themes)
+        if not theme in self.venue.themes:
+            print 'Theme not found, choices are %s' % str(self.venue.themes)
             return False
-        conn = self.project.conn
+        conn = self.venue.conn
         cur = conn.cursor()
         q = "update django_site set maintheme = '%s' " % (theme)
         q += " where name = '%s'" % (self.sitename)
@@ -87,7 +87,7 @@ class Site():
 
     def populate(self, replace=False):
         """ populate a site with content from the skel"""
-        skel = os.path.join(self.projectfolder, 'skel/site/')
+        skel = os.path.join(self.venuefolder, 'skel/site/')
         for path, dirs, files in os.walk(skel):
             for the_dir in dirs:
                 localpath = os.path.join(path.replace(skel, ''), the_dir)
@@ -102,7 +102,7 @@ class Site():
                 outfile = os.path.join(self.sitefolder, localpath)
                 if replace or not os.path.exists(outfile):
                     shutil.copy(infile, outfile)
-                    if localpath in self.project.paramfiles:
+                    if localpath in self.venue.paramfiles:
                         self.applyparams(localpath)
                     print outfile
                 else:
@@ -150,7 +150,7 @@ class Site():
             print 'file name required'
             return False
         if f == 'ALL':
-            files = self.project.paramfiles
+            files = self.venue.paramfiles
         else:
             files = [f, ]
         for f in files:
@@ -166,7 +166,7 @@ class Site():
     def getsettings(self):
         """ import the site's settings.py """
         try:
-            exec_string = "from %s.sites.%s import settings" % (self.project.PROJECT_NAME, self.sitename)
+            exec_string = "from %s.sites.%s import settings" % (self.venue.VENUE_NAME, self.sitename)
             exec(exec_string)
             self.settings = settings
             return True
@@ -200,7 +200,7 @@ class Site():
         if f is None:
             print 'file name required'
             return False
-        infile = os.path.join(self.projectfolder, 'skel/site', f)
+        infile = os.path.join(self.venuefolder, 'skel/site', f)
         infile += '.src'
         if not os.path.exists(infile):
             print 'file %s not found' % (infile)
@@ -209,7 +209,7 @@ class Site():
         if not os.path.exists(outfile) or replace == True:
             shutil.copy2(infile, outfile)
             print outfile
-            if f in self.project.paramfiles:
+            if f in self.venue.paramfiles:
                 self.applyparams(f)
         else:
             print 'skipping %s' % outfile

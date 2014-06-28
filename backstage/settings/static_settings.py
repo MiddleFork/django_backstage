@@ -10,7 +10,7 @@ STATIC_ROOT = '/data/www/static/'
 STATIC_URL = 'http://127.0.0.1/static/'
 
 #WEBUSER necessesary for uploads??
-WEBUSER = 'www-data'
+WEBUSER = 'backstage'
 
 STATICFILES_DIRS = []
 

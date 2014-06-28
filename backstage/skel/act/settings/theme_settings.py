@@ -1,0 +1,2 @@
+MAINTHEME = 'default'
+

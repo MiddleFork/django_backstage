@@ -1,0 +1,1 @@
+Location for live processes like uwsgi to write their pid, socket files etc.

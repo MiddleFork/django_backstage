@@ -4,7 +4,86 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dfb8af9-524e-43f0-867b-6ec190543c4b" name="Default" comment="" />
+    <list default="true" id="9dfb8af9-524e-43f0-867b-6ec190543c4b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/.LIVE/README.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/db/README.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/settings/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/acts/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/dns/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/settings/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/sites/example/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/act_apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/settings/act_settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/settings/common_settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/settings/common_settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/settings/db_settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/templates/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/templates/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/settings/local_settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/venv/requirements.20140531.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/venv/requirements.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/settings/theme_settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/conf/uwsgi.act.ini.src" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/conf/uwsgi.venue.ini.src" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/version.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/wsgi.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/wsgi.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/act.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/README.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/acts/conf/README.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/acts/conf/uwsgi.ini.src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/base/acts/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/base/local/settings.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/base/project/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/base/project/virtualenv/requirements.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/base/settings.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/conf/gunicorn_launcher.src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/conf/nginx.conf.src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/conf/supervisor.conf.src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/settings.py.src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/site_settings.py.src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/templates/SiteHead.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/templates/pages/page.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/theme_settings.py.src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/urls.py.src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/wsgi.py.src" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venue/acts/README.rst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venues/__init__.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/project.py" afterPath="$PROJECT_DIR$/backstage/venue.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/settings/project_settings.py" afterPath="$PROJECT_DIR$/backstage/settings/venue_settings.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/settings/settings.py" afterPath="$PROJECT_DIR$/backstage/settings/backstage_settings.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/acts/__init__.py" afterPath="$PROJECT_DIR$/backstage/skel/act/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/acts/conf/__init__.py" afterPath="$PROJECT_DIR$/backstage/shortcuts.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/__init__.py" afterPath="$PROJECT_DIR$/backstage/skel/venue/sites/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/dns/README.rst" afterPath="$PROJECT_DIR$/backstage/skel/venue/dns/README.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/dns/__init__.py" afterPath="$PROJECT_DIR$/backstage/producer/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/local/__init__.py" afterPath="$PROJECT_DIR$/backstage/act/act.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/local/local_settings.py" afterPath="$PROJECT_DIR$/backstage/skel/venue/settings/venue_settings.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/manage.py" afterPath="$PROJECT_DIR$/backstage/skel/venue/manage.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/project/__init__.py" afterPath="$PROJECT_DIR$/backstage/skel/act/static/README.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/project/urls.py" afterPath="$PROJECT_DIR$/backstage/skel/venue/urls.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/project/views.py" afterPath="$PROJECT_DIR$/backstage/skel/venue/views.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/project/virtualenv/build_virtualenv" afterPath="$PROJECT_DIR$/backstage/skel/venue/venv/build_virtualenv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/sites/README.md" afterPath="$PROJECT_DIR$/backstage/skel/venue/sites/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/sites/__init__.py" afterPath="$PROJECT_DIR$/backstage/skel/act/cstatic/README.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/sites/example/__init__.py" afterPath="$PROJECT_DIR$/backstage/producer/README.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/site/__init__.py" afterPath="$PROJECT_DIR$/backstage/act/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/site/__init__.py.src" afterPath="$PROJECT_DIR$/MANIFEST.in" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/site/manage.py.src" afterPath="$PROJECT_DIR$/backstage/skel/act/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/__init__.py" afterPath="$PROJECT_DIR$/backstage/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/settings/db_settings.py" afterPath="$PROJECT_DIR$/backstage/settings/db_settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/settings/django_settings.py" afterPath="$PROJECT_DIR$/backstage/settings/django_settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/settings/fabric_settings.py" afterPath="$PROJECT_DIR$/backstage/settings/fabric_settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/settings/mezzanine_settings.py" afterPath="$PROJECT_DIR$/backstage/settings/mezzanine_settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/models.py" afterPath="$PROJECT_DIR$/backstage/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/site.py" afterPath="$PROJECT_DIR$/backstage/site.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/settings/static_settings.py" afterPath="$PROJECT_DIR$/backstage/settings/static_settings.py" />
+    </list>
     <ignored path="backstage.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored mask="*.pyc" />
@@ -17,10 +96,10 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/backstage$Python_Console.coverage" NAME="Python Console Coverage Results" MODIFIED="1385664772377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backstage$master.coverage" NAME="master Coverage Results" MODIFIED="1385060725790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/backstage$site.coverage" NAME="site Coverage Results" MODIFIED="1385664817872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backstage" />
+    <SUITE FILE_PATH="coverage/backstage$Python_Console.coverage" NAME="Python Console Coverage Results" MODIFIED="1385664772377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/backstage$manage.coverage" NAME="manage Coverage Results" MODIFIED="1385144825188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/backstage$site.coverage" NAME="site Coverage Results" MODIFIED="1385664817872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backstage" />
     <SUITE FILE_PATH="coverage/backstage$urls.coverage" NAME="urls Coverage Results" MODIFIED="1385155461228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/backstage$settings.coverage" NAME="settings Coverage Results" MODIFIED="1385153330979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -30,7 +109,7 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
-  <component name="DjangoConsoleOptions">
+  <component name="DjangoConsoleOptions" module-name="backstage" is-module-sdk="true">
     <option name="myUseModuleSdk" value="true" />
     <option name="myModuleName" value="backstage" />
   </component>
@@ -40,61 +119,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../plicata/plicata/reviews/models.py">
+      <file leaf-file-name="version.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backstage/version.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="56" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777">
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../www/duck/project/virtualenv/lib/python2.7/site-packages/plicata/reviews/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="648" selection-end="648" vertical-scroll-proportion="-12.6" vertical-offset="0" max-vertical-offset="777">
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="0003_auto__add_field_review_moneyquote.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../www/duck/project/virtualenv/lib/python2.7/site-packages/plicata/reviews/migrations/0003_auto__add_field_review_moneyquote.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="79" selection-start="416" selection-end="416" vertical-scroll-proportion="-7.56" vertical-offset="0" max-vertical-offset="2373">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
+              <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reviews.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages/books/the-whiskey-creek-water-company/reviews.html">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backstage/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="66" selection-start="344" selection-end="344" vertical-scroll-proportion="-4.9" vertical-offset="0" max-vertical-offset="483">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1527" max-vertical-offset="2058">
+              <caret line="92" column="46" selection-start-line="92" selection-start-column="46" selection-end-line="92" selection-end-column="46" />
               <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setup.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/setup.py">
+      <file leaf-file-name="venue.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backstage/venue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setup.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../plicata/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="20" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5649">
+              <caret line="12" column="2" selection-start-line="8" selection-start-column="0" selection-end-line="133" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -107,33 +158,76 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/build/lib.linux-x86_64-2.7/backstage/settings/settings.py" />
+        <option value="$PROJECT_DIR$/backstage/settings/settings.py" />
+        <option value="$PROJECT_DIR$/backstage/project.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/settings.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/act/admin.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/act/act_apps.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/act/settings.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/venue/venue_settings.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/venue/settings.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/venue/settings/settings.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/venue/settings/settings_common.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/act/wsgi.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/venue/manage.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/venue/settings/db_settings.py" />
+        <option value="$PROJECT_DIR$/backstage/settings/venue_settings.py" />
+        <option value="$PROJECT_DIR$/backstage/settings/mezzanine_settings.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/act/settings/views.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/venue/templates/index.html" />
+        <option value="$PROJECT_DIR$/backstage/settings/static_settings.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/venue/venv/requirements.20140531.txt" />
+        <option value="$PROJECT_DIR$/backstage/settings/backstage_settings.py" />
+        <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$PROJECT_DIR$/backstage/themes/fluid/templates/ThreeColumns.html" />
-        <option value="$PROJECT_DIR$/../../www/quil/sites/janw/templates/pages/books.html" />
-        <option value="$PROJECT_DIR$/../../www/duck/sites/janw/templates/TopBanner.html" />
-        <option value="$PROJECT_DIR$/backstage/themes/container/templates/ThemeBody.html" />
-        <option value="$PROJECT_DIR$/backstage/themes/default/templates/MainBody.html" />
-        <option value="$PROJECT_DIR$/../../www/duck/local/static_settings.py" />
-        <option value="$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages/books.html" />
-        <option value="$PROJECT_DIR$/../../www/duck/project/virtualenv/lib/python2.7/site-packages/plicata/reviews/models.py" />
-        <option value="$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages/index.html" />
-        <option value="$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages/books/janbookpage.html" />
-        <option value="$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages/books/reviews.html" />
-        <option value="$PROJECT_DIR$/../plicata/plicata/reviews/models.py" />
-        <option value="$PROJECT_DIR$/../plicata/setup.py" />
-        <option value="$PROJECT_DIR$/../../www/duck/project/virtualenv/lib/python2.7/site-packages/plicata/reviews/migrations/0003_auto__add_field_review_moneyquote.py" />
-        <option value="$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages/books/the-whiskey-creek-water-company/reviews.html" />
+        <option value="$PROJECT_DIR$/backstage/settings/django_settings.py" />
+        <option value="$PROJECT_DIR$/backstage/__init__.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/act/settings/act_settings.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/act/settings/db_settings.py" />
+        <option value="$PROJECT_DIR$/backstage/conf/uwsgi.ini.src" />
+        <option value="$PROJECT_DIR$/backstage/shortcuts.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/act/settings/local_settings.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/venue/settings/__init__.py" />
+        <option value="$PROJECT_DIR$/backstage/producer/README.rst" />
+        <option value="$PROJECT_DIR$/backstage/skel/act/cstatic/README.rst" />
+        <option value="$PROJECT_DIR$/backstage/skel/venue/settings/venue_settings.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/act/settings/__init__.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/act/static/README.rst" />
+        <option value="$PROJECT_DIR$/backstage/skel/act/templates/index.html" />
+        <option value="$PROJECT_DIR$/backstage/skel/act/views.py" />
+        <option value="$PROJECT_DIR$/backstage/act/act.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/venue/wsgi.py" />
+        <option value="$PROJECT_DIR$/backstage/conf/uwsgi.venue.ini.src" />
+        <option value="$PROJECT_DIR$/backstage/skel/act/urls.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/venue/urls.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/venue/views.py" />
+        <option value="$PROJECT_DIR$/backstage/utils/uwsgi_portsniffer.py" />
+        <option value="$PROJECT_DIR$/backstage/venue.py" />
+        <option value="$PROJECT_DIR$/backstage/skel/venue/.LIVE/README.rst" />
+        <option value="$PROJECT_DIR$/backstage/act/models.py" />
+        <option value="$PROJECT_DIR$/backstage/venue/models.py" />
+        <option value="$PROJECT_DIR$/backstage/models.py" />
+        <option value="$PROJECT_DIR$/backstage/version.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="509" />
-    <option name="y" value="2" />
-    <option name="width" value="1400" />
-    <option name="height" value="980" />
+    <option name="x" value="-1" />
+    <option name="y" value="-1" />
+    <option name="width" value="1602" />
+    <option name="height" value="981" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -154,21 +248,21 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -180,6 +274,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -194,165 +289,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="duck" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backstage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="duck" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backstage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="duck" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="janw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backstage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="duck" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="janw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backstage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="duck" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="janw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backstage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="duck" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="janw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="books" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backstage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="duck" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="janw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="books" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="the-whiskey-creek-water-company" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backstage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="duck" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
+              <option name="myItemId" value="django_backstage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -365,74 +302,27 @@
               <option name="myItemId" value="django_backstage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="django_backstage">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backstage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backstage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="django_backstage">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django_backstage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="backstage">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backstage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="django_backstage">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="backstage">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="skel">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="django_backstage">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="backstage">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="skel">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="base">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="act" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -444,33 +334,35 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../www/duck" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="SearchEverywhereHistory" value="virtualenv" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///data/devel/django_backstage/backstage/utils/uwsgi_portsniffer.py" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
-      <PyConsoleSettings>
+      <console-settings module-name="backstage" is-module-sdk="true">
         <option name="myUseModuleSdk" value="true" />
         <option name="myModuleName" value="backstage" />
-      </PyConsoleSettings>
+      </console-settings>
     </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/backstage/" />
-      <recent name="$PROJECT_DIR$/backstage/themes" />
-      <recent name="$PROJECT_DIR$/../../www/quil/sites/plicatapress/templates/pages/janbookpage.html" />
-      <recent name="$PROJECT_DIR$/../../www/quil/sites/plicatapress/templates/pages" />
-      <recent name="$PROJECT_DIR$/../../www/dosie" />
+      <recent name="$PROJECT_DIR$/backstage/conf" />
+      <recent name="$PROJECT_DIR$/backstage/skel/venue" />
+      <recent name="$PROJECT_DIR$/backstage/skel/act/settings" />
+      <recent name="$PROJECT_DIR$/backstage/skel/venue/settings" />
+      <recent name="$PROJECT_DIR$/backstage/skel/venue/venv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages/books/the-whiskey-creek-water-company" />
-      <recent name="$PROJECT_DIR$/../../www/duck/sites/janw/templates" />
-      <recent name="$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages" />
-      <recent name="$PROJECT_DIR$/../../www/quil/project/project/themes/default/templates" />
-      <recent name="$PROJECT_DIR$/backstage/skel/base" />
+      <recent name="$PROJECT_DIR$/backstage" />
+      <recent name="$PROJECT_DIR$/backstage/skel/act/.LIVE" />
+      <recent name="$PROJECT_DIR$/backstage/skel/venue" />
+      <recent name="$PROJECT_DIR$/backstage/skel/act" />
+      <recent name="$PROJECT_DIR$/backstage/skel/venue/settings" />
     </key>
   </component>
   <component name="RunManager" selected="Python.site">
@@ -510,7 +402,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="backstage" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backstage/skel/base/manage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backstage/skel/venue/manage.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -640,24 +532,6 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="docs" factoryName="Docutils task">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="backstage" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="docutils_input_file" value="" />
-      <option name="docutils_output_file" value="" />
-      <option name="docutils_params" value="" />
-      <option name="docutils_task" value="" />
-      <option name="docutils_open_in_browser" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -675,7 +549,22 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="backstage" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -699,6 +588,9 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -759,23 +651,8 @@
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="mySSHConnectionTimeout" value="30000" />
-    <option name="mySSHReadTimeout" value="30000" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <option name="IGNORE_EXTERNALS" value="false" />
+  <component name="SvnConfiguration" myUseAcceleration="nothing">
     <configuration useDefault="false">$USER_HOME$/.subversion</configuration>
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -806,49 +683,37 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="509" y="2" width="1400" height="980" extended-state="0" />
+    <frame x="-1" y="-1" width="1602" height="981" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.67757577" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="-1" y="-1" width="1802" height="1001" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40412623" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="-1" y="-1" width="1802" height="1001" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969698" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32484847" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24888559" sideWeight="0.49939394" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2830609" sideWeight="0.68242425" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25571066" sideWeight="0.49939394" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3685567" sideWeight="0.32242423" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39636365" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19910847" sideWeight="0.50060606" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31757575" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19910847" sideWeight="0.50060606" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40412623" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45024273" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288835" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896304" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49878642" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896304" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3987879" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="-1" y="-1" width="1802" height="1001" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39834514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19565217" sideWeight="0.42671394" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298122" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19565217" sideWeight="0.67021275" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3286052" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -863,128 +728,375 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="13" />
+      <option name="time" value="15" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../www/duck/project/virtualenv/lib/python2.7/site-packages/plicata/events/models.py">
+    <entry file="file://$PROJECT_DIR$/backstage/settings/db_settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="794">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/settings/venue_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.864" vertical-offset="261" max-vertical-offset="819">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/settings/misc_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="474">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/settings/mezzanine_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="1575">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/venue/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7" vertical-offset="0" max-vertical-offset="210">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/venue/venv/requirements.20140531.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="819">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/settings/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="448">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/act/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="767">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/venue/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.504" vertical-offset="0" max-vertical-offset="525">
+          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/settings/static_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47908744" vertical-offset="0" max-vertical-offset="609">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/venue/settings/db_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="147">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../www/duck/project/virtualenv/lib/python2.7/site-packages/plicata/characters/models.py">
+    <entry file="file://$PROJECT_DIR$/backstage/settings/backstage_settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="39" selection-start="838" selection-end="898" vertical-scroll-proportion="-17.64" vertical-offset="0" max-vertical-offset="1428">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="1047" max-vertical-offset="1911">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages/index.html">
+    <entry file="file://$PROJECT_DIR$/backstage/settings/django_settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="56" selection-start="2472" selection-end="2472" vertical-scroll-proportion="-18.566668" vertical-offset="346" max-vertical-offset="1344">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="404" max-vertical-offset="1197">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages/page.html">
+    <entry file="file://$PROJECT_DIR$/backstage/skel/venue/venv/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="768">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="966">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages/books/janbookpage.html">
+    <entry file="file://$PROJECT_DIR$/backstage/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="10" selection-start="540" selection-end="540" vertical-scroll-proportion="-15.4" vertical-offset="0" max-vertical-offset="1596">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../www/duck/sites/janw/templates/wcwcpage.html">
+    <entry file="file://$PROJECT_DIR$/backstage/skel/venue/venv/requirements.20140602.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="768">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="966">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages/books/the-whiskey-creek-water-company/characters.html">
+    <entry file="file://$PROJECT_DIR$/backstage/skel/act/settings/act_settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="19" selection-start="212" selection-end="366" vertical-scroll-proportion="0.22764228" vertical-offset="0" max-vertical-offset="738">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages/books/the-whiskey-creek-water-company/about.html">
+    <entry file="file://$PROJECT_DIR$/backstage/skel/act/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="794">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="489">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages/books/the-whiskey-creek-water-company/settings.html">
+    <entry file="file://$PROJECT_DIR$/backstage/skel/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="44" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="147">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="489">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages/books/booksubpage.html">
+    <entry file="file://$PROJECT_DIR$/backstage/skel/act/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="768">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../plicata/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="20" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../plicata/plicata/reviews/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="56" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../www/duck/project/virtualenv/lib/python2.7/site-packages/plicata/reviews/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="648" selection-end="648" vertical-scroll-proportion="-12.6" vertical-offset="0" max-vertical-offset="777">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../www/duck/project/virtualenv/lib/python2.7/site-packages/plicata/reviews/migrations/0003_auto__add_field_review_moneyquote.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="79" selection-start="416" selection-end="416" vertical-scroll-proportion="-7.56" vertical-offset="0" max-vertical-offset="2373">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../www/duck/sites/janw/templates/pages/books/the-whiskey-creek-water-company/reviews.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="66" selection-start="344" selection-end="344" vertical-scroll-proportion="-4.9" vertical-offset="0" max-vertical-offset="483">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="399">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/shortcuts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="231">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/act/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="147">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/act/settings/local_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="434">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/venue/settings/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="273">
+          <caret line="6" column="54" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/venue/settings/common_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="966">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/act/settings/common_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="945">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/act/settings/db_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/producer/README.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="588">
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/utils/context_processors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="382">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/conf/uwsgi.act.ini.src">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="693">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/act/cstatic/README.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="231">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/templatetags/settings_tags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/act/static/README.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.136897" vertical-offset="0" max-vertical-offset="767">
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/venue/settings/venue_settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19354838" vertical-offset="0" max-vertical-offset="434">
+          <caret line="6" column="84" selection-start-line="6" selection-start-column="84" selection-end-line="6" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/act/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/act/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10741688" vertical-offset="0" max-vertical-offset="391">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/act/settings/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.186636" vertical-offset="115" max-vertical-offset="882">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/venue/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33870968" vertical-offset="0" max-vertical-offset="434">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/conf/uwsgi.venue.ini.src">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5782609" vertical-offset="154" max-vertical-offset="693">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/act/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="756">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/venue/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="693">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/venue/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/act/act.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50782996" vertical-offset="1915" max-vertical-offset="4452">
+          <caret line="102" column="32" selection-start-line="86" selection-start-column="4" selection-end-line="109" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/utils/uwsgi_portsniffer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="2079">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/skel/act/.LIVE/README.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="434">
+          <caret line="0" column="76" selection-start-line="0" selection-start-column="76" selection-end-line="0" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/venue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5649">
+          <caret line="12" column="2" selection-start-line="8" selection-start-column="0" selection-end-line="133" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1527" max-vertical-offset="2058">
+          <caret line="92" column="46" selection-start-line="92" selection-start-column="46" selection-end-line="92" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/version.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
+          <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
           <folding />
         </state>
       </provider>
