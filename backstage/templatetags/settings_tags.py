@@ -1,3 +1,12 @@
+"""
+settings_tags.py
+This file provides a simple Django Templatetag
+to expose the app's settings values in the HTML 
+template environment. Settings are stored as 'csettings'
+to avoid a name conflict 
+and accesses as {{ csettings.FOO }} in the templates.
+""" 
+
 from django import template
 from django.conf import settings
 

@@ -1,8 +1,20 @@
 <component name="ProjectDictionaryState">
   <dictionary name="walker">
     <words>
+      <w>acthome</w>
+      <w>actname</w>
+      <w>actsdir</w>
+      <w>dumpsettings</w>
+      <w>linkmode</w>
+      <w>outname</w>
+      <w>postpopulate</w>
+      <w>prevalidate</w>
       <w>sitename</w>
       <w>skel</w>
+      <w>srcdata</w>
+      <w>tmpfile</w>
+      <w>uwsgi</w>
+      <w>uwsgifile</w>
     </words>
   </dictionary>
 </component>

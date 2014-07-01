@@ -1,14 +1,12 @@
 import os
 import sys
-import stat
 import backstage
-import subprocess
-from backstage.utils import uwsgi_portsniffer
+from backstage.models import Venue
 
 
 def copy_venue_skel(venue_path):
     """Populate a (usually) new backstage venue with the contents of backstage/skel"""
-    skeldir = os.path.join(os.path.dirname(backstage.__file__),'skel/venue')
+    skeldir = os.path.join(os.path.dirname(backstage.__file__), 'skel/venue')
     if not os.path.exists(skeldir):
         s = 'Source skeleton files for backstage venue not found.  This is a system error'
         print s
@@ -23,18 +21,20 @@ def copy_venue_skel(venue_path):
         raise
     return True
 
-def create_venue_uwsgi_file(VENUE_BASE, VENUE_ROOT, VENUE_NAME):
+
+def create_venue_uwsgi_file(venue_base, venue_root, venue_name):
     """create the uwsgi ini file for a (usually) new Venue.
     Reads backstage/config/uwsgi.venue.ini.src
     """
     srcfile = os.path.join(os.path.dirname(backstage.__file__), 'conf/uwsgi.venue.ini.src')
     with open(srcfile, 'r') as f:
         srcdata = f.read()
-    outfile = os.path.join(VENUE_ROOT, 'backstage-%s-uwsgi.ini' % (VENUE_NAME))
+    outfile = os.path.join(venue_root, 'backstage-%s-uwsgi.ini' % venue_name)
     o = open(outfile, 'w')
-    o.write(srcdata.format(VENUE_BASE=VENUE_BASE, VENUE_ROOT=VENUE_ROOT, VENUE_NAME=VENUE_NAME))
+    o.write(srcdata.format(VENUE_BASE=venue_base, VENUE_ROOT=venue_root, VENUE_NAME=venue_name))
     o.close()
     return
+
 
 def new_venue(venue_name, venue_base, source_ini_file = None):
         """create a new backstage venue with the given name and located at the specified path"""
@@ -77,6 +77,7 @@ def new_venue(venue_name, venue_base, source_ini_file = None):
         print s
         return p
 
+
 def test_venue_exists(venue_root):
     """Test for the existence of a Backstage venue instance.  Return True or False"""
     if not os.path.exists(venue_root):
@@ -90,6 +91,7 @@ def test_venue_exists(venue_root):
         print s
         return False
     return True
+
 
 def use_venue(venue_root):
     """Use an existing Backstage venue.  Returns the venue instance."""
@@ -127,6 +129,7 @@ def use_venue(venue_root):
     s = 'Using Backstage venue %s at %s' % (backstage_venue.VENUE_NAME, backstage_venue.VENUE_ROOT)
     print s
     return backstage_venue
+
 
 def venue_from_cwd():
     cwd = os.getcwd()

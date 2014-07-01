@@ -7,22 +7,15 @@ harikiri=20
 max-requests=1000
 vacuum=True
 disable-logging = True
-
 uid = backstage
 gid = adm
-
-#Virtual Environment, two ways of saying the same thing.
-home = {VENUE_ROOT}/venv # Path to virtual environment,
+home = {VENUE_ROOT}/venv
 virtualenv = {VENUE_ROOT}/venv
-
-pythonpath = {VENUE_ROOT} # Path to project
-
+pythonpath = {VENUE_ROOT}
 chdir = {VENUE_BASE}
 pythonpath = {VENUE_BASE}
 module = {VENUE_NAME}.wsgi:application
-
-pidfile = /tmp/backstage-{VENUE_NAME}.pid
-socket  = /tmp/backstage-{VENUE_NAME}.sock
-daemonize=/var/log/uwsgi/backstage-{VENUE_NAME}.log
-
+pidfile = {VENUE_ROOT}/.LIVE/uwsgi-backstage-{VENUE_NAME}.pid
+socket  = {VENUE_ROOT}/.LIVE/uwsgi-backstage-{VENUE_NAME}.sock
+daemonize=/var/log/uwsgi/uwsgi-backstage-{VENUE_NAME}.log
 log-maxsize=100000

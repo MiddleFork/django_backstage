@@ -5,84 +5,108 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dfb8af9-524e-43f0-867b-6ec190543c4b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/.LIVE/README.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/db/README.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/settings/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/acts/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/dns/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/settings/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/sites/example/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/act_apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/settings/act_settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/settings/common_settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/settings/common_settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/settings/db_settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/templates/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/templates/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/settings/local_settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/venv/requirements.20140531.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/venv/requirements.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/settings/theme_settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/conf/uwsgi.act.ini.src" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/conf/uwsgi.venue.ini.src" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/version.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/act/wsgi.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/skel/venue/wsgi.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/act.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/README.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/acts/conf/README.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/acts/conf/uwsgi.ini.src" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/base/acts/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/base/local/settings.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/base/project/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/base/project/virtualenv/requirements.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/base/settings.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/conf/gunicorn_launcher.src" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/conf/nginx.conf.src" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/conf/supervisor.conf.src" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/settings.py.src" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/site_settings.py.src" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/templates/SiteHead.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/templates/pages/page.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/theme_settings.py.src" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/urls.py.src" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/site/wsgi.py.src" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venue/acts/README.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venues/__init__.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/project.py" afterPath="$PROJECT_DIR$/backstage/venue.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/settings/project_settings.py" afterPath="$PROJECT_DIR$/backstage/settings/venue_settings.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/settings/settings.py" afterPath="$PROJECT_DIR$/backstage/settings/backstage_settings.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/acts/__init__.py" afterPath="$PROJECT_DIR$/backstage/skel/act/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/acts/conf/__init__.py" afterPath="$PROJECT_DIR$/backstage/shortcuts.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/__init__.py" afterPath="$PROJECT_DIR$/backstage/skel/venue/sites/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/dns/README.rst" afterPath="$PROJECT_DIR$/backstage/skel/venue/dns/README.rst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/dns/__init__.py" afterPath="$PROJECT_DIR$/backstage/producer/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/local/__init__.py" afterPath="$PROJECT_DIR$/backstage/act/act.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/local/local_settings.py" afterPath="$PROJECT_DIR$/backstage/skel/venue/settings/venue_settings.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/manage.py" afterPath="$PROJECT_DIR$/backstage/skel/venue/manage.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/project/__init__.py" afterPath="$PROJECT_DIR$/backstage/skel/act/static/README.rst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/project/urls.py" afterPath="$PROJECT_DIR$/backstage/skel/venue/urls.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/project/views.py" afterPath="$PROJECT_DIR$/backstage/skel/venue/views.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/project/virtualenv/build_virtualenv" afterPath="$PROJECT_DIR$/backstage/skel/venue/venv/build_virtualenv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/sites/README.md" afterPath="$PROJECT_DIR$/backstage/skel/venue/sites/README.md" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/sites/__init__.py" afterPath="$PROJECT_DIR$/backstage/skel/act/cstatic/README.rst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/base/sites/example/__init__.py" afterPath="$PROJECT_DIR$/backstage/producer/README.rst" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/site/__init__.py" afterPath="$PROJECT_DIR$/backstage/act/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/site/__init__.py.src" afterPath="$PROJECT_DIR$/MANIFEST.in" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/skel/site/manage.py.src" afterPath="$PROJECT_DIR$/backstage/skel/act/manage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/__init__.py" afterPath="$PROJECT_DIR$/backstage/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/settings/db_settings.py" afterPath="$PROJECT_DIR$/backstage/settings/db_settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/settings/django_settings.py" afterPath="$PROJECT_DIR$/backstage/settings/django_settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/settings/fabric_settings.py" afterPath="$PROJECT_DIR$/backstage/settings/fabric_settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/settings/mezzanine_settings.py" afterPath="$PROJECT_DIR$/backstage/settings/mezzanine_settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/utils/act_utils.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/act/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/act/act.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/producer/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/site.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venue/venv/include/python2.7" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venue/venv/local/bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venue/venv/local/build_virtualenv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venue/venv/local/include" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venue/venv/local/lib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venue/venv/local/link_newest_requirements.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venue/venv/local/requirements.20131225.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venue/venv/local/requirements.20140106.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venue/venv/local/requirements.20140528.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venue/venv/local/requirements.20140531.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venue/venv/local/requirements.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/skel/venue/venv/requirements.20140531.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/templatetags/ad_tags.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/bs3/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/bs3/templates/SiteBase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/bs3/templates/SiteCSS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/bs3/templates/ThemeBase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/bs3/templates/ThemeCSS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/bs3/templates/ThemeHead.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/bs3/templates/ThemeJS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/bs3/templates/TopBar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/container/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/container/templates/ThemeBase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/container/templates/ThemeBody.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/container/templates/ThemeCSS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/container/templates/ThemeHead.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/container/templates/ThemeJS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/container/templates/TopBar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/HeadMeta.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/Header.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/HeroUnit.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/LeftContent.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/MainBody.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/MasterCSS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/MezzanineBreadCrumb.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/MezzanineCSS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/MezzanineHead.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/MezzanineJS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/MezzanineLeftMenuTree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/MezzanineMenuTree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/MezzanineMessages.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/MezzanineNavBar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/MezzanineTopBar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/MezzanineTwitter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/ProjectBase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/ProjectCSS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/ProjectHead.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/ProjectJS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/RightContent.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/SideBar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/SiteBase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/SiteCSS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/SiteJS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/ThemeBase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/ThemeCSS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/ThemeHead.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/ThemeJS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/TopBanner.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/TopBar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/TopRibbon.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/_flexipage/test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default/templates/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default24/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default24/templates/ThemeBase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default24/templates/ThemeCSS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default24/templates/ThemeHead.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/default24/templates/ThemeJS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/fluid/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/fluid/templates/ThemeBase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/fluid/templates/ThemeBody.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/fluid/templates/ThemeCSS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/fluid/templates/ThemeHead.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/fluid/templates/ThemeJS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/fluid/templates/ThreeColumns.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/fluid/templates/TopBar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/hero/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/hero/templates/ThemeBase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/hero/templates/ThemeBody.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/hero/templates/ThemeCSS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/hero/templates/ThemeHead.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/hero/templates/ThemeJS.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/hero/templates/ThemeTopBar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/themes/hero/templates/ThreeColumns.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/tools/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/tools/ordinal.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backstage/tools/tools.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/producer/README.rst" afterPath="$PROJECT_DIR$/backstage/docs/Producer.rst" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/venue.py" afterPath="$PROJECT_DIR$/backstage/utils/venue_utils.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/models.py" afterPath="$PROJECT_DIR$/backstage/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/site.py" afterPath="$PROJECT_DIR$/backstage/site.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/settings/static_settings.py" afterPath="$PROJECT_DIR$/backstage/settings/static_settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/templatetags/settings_tags.py" afterPath="$PROJECT_DIR$/backstage/templatetags/settings_tags.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/shortcuts.py" afterPath="$PROJECT_DIR$/backstage/shortcuts.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/templatetags/underscore.py" afterPath="$PROJECT_DIR$/backstage/templatetags/underscore.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/conf/uwsgi.act.ini.src" afterPath="$PROJECT_DIR$/backstage/conf/uwsgi.act.ini.src" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/conf/uwsgi.venue.ini.src" afterPath="$PROJECT_DIR$/backstage/conf/uwsgi.venue.ini.src" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/version.py" afterPath="$PROJECT_DIR$/backstage/version.py" />
     </list>
     <ignored path="backstage.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,10 +120,10 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/backstage$master.coverage" NAME="master Coverage Results" MODIFIED="1385060725790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backstage$Python_Console.coverage" NAME="Python Console Coverage Results" MODIFIED="1385664772377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/backstage$manage.coverage" NAME="manage Coverage Results" MODIFIED="1385144825188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/backstage$master.coverage" NAME="master Coverage Results" MODIFIED="1385060725790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backstage$site.coverage" NAME="site Coverage Results" MODIFIED="1385664817872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backstage" />
+    <SUITE FILE_PATH="coverage/backstage$manage.coverage" NAME="manage Coverage Results" MODIFIED="1385144825188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/backstage$urls.coverage" NAME="urls Coverage Results" MODIFIED="1385155461228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/project" />
     <SUITE FILE_PATH="coverage/backstage$settings.coverage" NAME="settings Coverage Results" MODIFIED="1385153330979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -118,40 +142,7 @@
     <favorites_list name="backstage" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="version.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/backstage/version.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
-              <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1527" max-vertical-offset="2058">
-              <caret line="92" column="46" selection-start-line="92" selection-start-column="46" selection-end-line="92" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="venue.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage/venue.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5649">
-              <caret line="12" column="2" selection-start-line="8" selection-start-column="0" selection-end-line="133" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -169,8 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/build/lib.linux-x86_64-2.7/backstage/settings/settings.py" />
-        <option value="$PROJECT_DIR$/backstage/settings/settings.py" />
         <option value="$PROJECT_DIR$/backstage/project.py" />
         <option value="$PROJECT_DIR$/backstage/skel/settings.py" />
         <option value="$PROJECT_DIR$/backstage/skel/act/admin.py" />
@@ -207,19 +196,21 @@
         <option value="$PROJECT_DIR$/backstage/skel/act/static/README.rst" />
         <option value="$PROJECT_DIR$/backstage/skel/act/templates/index.html" />
         <option value="$PROJECT_DIR$/backstage/skel/act/views.py" />
-        <option value="$PROJECT_DIR$/backstage/act/act.py" />
         <option value="$PROJECT_DIR$/backstage/skel/venue/wsgi.py" />
-        <option value="$PROJECT_DIR$/backstage/conf/uwsgi.venue.ini.src" />
         <option value="$PROJECT_DIR$/backstage/skel/act/urls.py" />
         <option value="$PROJECT_DIR$/backstage/skel/venue/urls.py" />
         <option value="$PROJECT_DIR$/backstage/skel/venue/views.py" />
         <option value="$PROJECT_DIR$/backstage/utils/uwsgi_portsniffer.py" />
-        <option value="$PROJECT_DIR$/backstage/venue.py" />
         <option value="$PROJECT_DIR$/backstage/skel/venue/.LIVE/README.rst" />
         <option value="$PROJECT_DIR$/backstage/act/models.py" />
         <option value="$PROJECT_DIR$/backstage/venue/models.py" />
-        <option value="$PROJECT_DIR$/backstage/models.py" />
+        <option value="$PROJECT_DIR$/backstage/conf/uwsgi.venue.ini.src" />
+        <option value="$PROJECT_DIR$/backstage/conf/uwsgi.act.ini.src" />
         <option value="$PROJECT_DIR$/backstage/version.py" />
+        <option value="$PROJECT_DIR$/backstage/venue.py" />
+        <option value="$PROJECT_DIR$/backstage/act/act.py" />
+        <option value="$PROJECT_DIR$/backstage/models.py" />
+        <option value="$PROJECT_DIR$/backstage/utils/venue_utils.py" />
       </list>
     </option>
   </component>
@@ -321,7 +312,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="act" />
+              <option name="myItemId" value="conf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -358,11 +349,11 @@
       <recent name="$PROJECT_DIR$/backstage/skel/venue/venv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backstage/docs" />
+      <recent name="$PROJECT_DIR$/backstage/utils" />
+      <recent name="$PROJECT_DIR$/backstage/utils/venue_utils.py" />
       <recent name="$PROJECT_DIR$/backstage" />
       <recent name="$PROJECT_DIR$/backstage/skel/act/.LIVE" />
-      <recent name="$PROJECT_DIR$/backstage/skel/venue" />
-      <recent name="$PROJECT_DIR$/backstage/skel/act" />
-      <recent name="$PROJECT_DIR$/backstage/skel/venue/settings" />
     </key>
   </component>
   <component name="RunManager" selected="Python.site">
@@ -532,6 +523,24 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="backstage" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -549,22 +558,7 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="docs" factoryName="Docutils task">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="backstage" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="docutils_input_file" value="" />
-      <option name="docutils_output_file" value="" />
-      <option name="docutils_params" value="" />
-      <option name="docutils_task" value="" />
-      <option name="docutils_open_in_browser" value="false" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -588,9 +582,6 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -683,15 +674,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-1" width="1602" height="981" extended-state="0" />
+    <frame x="-1" y="-1" width="1602" height="981" extended-state="1" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40412623" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="-1" y="-1" width="1802" height="1001" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.9526699" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="-1" y="-1" width="1802" height="1001" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969698" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49878642" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25571066" sideWeight="0.49939394" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3685567" sideWeight="0.32242423" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37371135" sideWeight="0.32242423" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39636365" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19910847" sideWeight="0.50060606" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40412623" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -700,7 +692,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49878642" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896304" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -728,10 +719,26 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="15" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/backstage/utils/venue_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="5754">
+          <caret line="12" column="2" selection-start-line="8" selection-start-column="0" selection-end-line="133" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#112#690#0" expanded="false" />
+            <element signature="e#762#1252#0" expanded="false" />
+            <element signature="e#1326#2396#0" expanded="false" />
+            <element signature="e#2438#2963#0" expanded="false" />
+            <element signature="e#2997#4259#0" expanded="false" />
+            <element signature="e#4288#4379#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backstage/settings/db_settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
@@ -764,13 +771,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.7" vertical-offset="0" max-vertical-offset="210">
           <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage/skel/venue/venv/requirements.20140531.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="819">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -897,13 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage/act/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="147">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backstage/skel/act/settings/local_settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="434">
@@ -939,25 +932,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage/producer/README.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="588">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backstage/utils/context_processors.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="382">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage/conf/uwsgi.act.ini.src">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="693">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1017,13 +995,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage/conf/uwsgi.venue.ini.src">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5782609" vertical-offset="154" max-vertical-offset="693">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backstage/skel/act/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="290" max-vertical-offset="756">
@@ -1051,52 +1022,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage/act/act.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50782996" vertical-offset="1915" max-vertical-offset="4452">
-          <caret line="102" column="32" selection-start-line="86" selection-start-column="4" selection-end-line="109" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backstage/utils/uwsgi_portsniffer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="2079">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backstage/skel/act/.LIVE/README.rst">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="434">
           <caret line="0" column="76" selection-start-line="0" selection-start-column="76" selection-end-line="0" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/conf/uwsgi.act.ini.src">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5202086" vertical-offset="0" max-vertical-offset="767">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage/venue.py">
+    <entry file="file://$PROJECT_DIR$/backstage/version.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5649">
-          <caret line="12" column="2" selection-start-line="8" selection-start-column="0" selection-end-line="133" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="767">
+          <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/conf/uwsgi.venue.ini.src">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5031526" vertical-offset="0" max-vertical-offset="793">
+          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backstage/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1527" max-vertical-offset="2058">
-          <caret line="92" column="46" selection-start-line="92" selection-start-column="46" selection-end-line="92" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.13461539" vertical-offset="0" max-vertical-offset="3234">
+          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding>
+            <element signature="e#433#701#0" expanded="false" />
+            <element signature="e#734#1194#0" expanded="false" />
+            <element signature="e#1232#1653#0" expanded="false" />
+            <element signature="e#1695#2051#0" expanded="false" />
+            <element signature="e#2091#2187#0" expanded="false" />
+            <element signature="e#2219#2516#0" expanded="false" />
+            <element signature="e#2550#2941#0" expanded="false" />
+            <element signature="e#3548#3775#0" expanded="false" />
+            <element signature="e#3828#4777#0" expanded="false" />
+            <element signature="e#4816#5110#0" expanded="false" />
+            <element signature="e#5150#5960#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/utils/uwsgi_portsniffer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.026481714" vertical-offset="21" max-vertical-offset="2037">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/utils/venue_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6090794" vertical-offset="0" max-vertical-offset="793">
+          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#112#690#0" expanded="false" />
+            <element signature="e#762#1252#0" expanded="false" />
+            <element signature="e#1326#2396#0" expanded="false" />
+            <element signature="e#2438#2963#0" expanded="false" />
+            <element signature="e#2997#4259#0" expanded="false" />
+            <element signature="e#4288#4379#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/utils/act_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1512">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage/version.py">
+    <entry file="file://$PROJECT_DIR$/backstage/docs/Producer.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
-          <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.58259773" vertical-offset="0" max-vertical-offset="793">
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
           <folding />
         </state>
       </provider>
