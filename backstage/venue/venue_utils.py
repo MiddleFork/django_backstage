@@ -1,7 +1,7 @@
 import os
 import sys
 
-from venue.venue import Venue
+from backstage.shortcuts import Venue
 import backstage
 
 
@@ -37,7 +37,7 @@ def create_venue_uwsgi_file(venue_base, venue_root, venue_name):
     return
 
 
-def new_venue(venue_name, venue_base, source_ini_file = None):
+def new_venue(venue_name, venue_base):
         """create a new backstage venue with the given name and located at the specified path"""
         venue_path = os.path.abspath(os.path.join(venue_base, venue_name))
         try:

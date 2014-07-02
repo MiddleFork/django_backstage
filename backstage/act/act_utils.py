@@ -2,12 +2,9 @@ import os
 import tarfile
 
 import tempfile
-from act.act import Act
-
-from venue.venue import Venue
-
 import backstage
-from venue.venue_utils import use_venue
+from backstage.shortcuts import Act, Venue
+from backstage.venue.venue_utils import use_venue
 
 
 def new_act(venue, actname):

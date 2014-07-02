@@ -1,13 +1,18 @@
 import os
 from backstage.utils import uwsgi_portsniffer
 
-__author__ = 'walker'
-
-
-class Venue(models.Model):
+class Venue():
     """A backstage Venue is a specific local install of backstage."""
-    venue_name = models.TextField(max_length=80, primary_key=True)
-    venue_path = models.TextField(max_length=255)
+
+    def __init__(self, venue_dir):
+        """Venue folder structure must already exist before we can create and utilize
+        a venue instance
+        """
+        venue_secret = os.path.join(venue_dir, './LIVE/backstage-venue.txt')
+        if not os.path.exists(venue_secret):
+            print 'Invalid Venue'
+            return None
+
 
     def get_settings(self):
         """ import the venue's settings.py"""

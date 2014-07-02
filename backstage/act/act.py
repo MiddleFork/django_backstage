@@ -8,9 +8,9 @@ from backstage.venue.venue import Venue
 __author__ = 'walker'
 
 
-class Act(models.Model):
-    actname = models.TextField(max_length=80)
-    venue = models.ForeignKey(Venue)
+class Act():
+    actname = ''
+    venue = ''
 
     def reload(self):
         """Reload the Act, by touching its ini file"""
