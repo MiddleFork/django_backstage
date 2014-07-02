@@ -5,6 +5,9 @@ venv/lib/
 venv/local/
 venv/share/
 
+#JetBrains PyCharm
+.idea/
+
 # like duh
 *.pyc
 *~
