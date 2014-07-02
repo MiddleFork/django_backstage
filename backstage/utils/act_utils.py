@@ -3,7 +3,7 @@ import tarfile
 
 import tempfile
 
-from Venue.venue import Venue
+from venue.venue import Venue
 
 import backstage
 from venue.venue_utils import use_venue

@@ -4,9 +4,10 @@ import time
 
 import requests
 
+
 #from django.db import models
 from django.db.models.signals import pre_init, post_init
-from Venue.venue import Venue
+from venue.venue import Venue
 from backstage.utils import uwsgi_portsniffer
 
 

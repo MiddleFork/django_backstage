@@ -1,6 +1,7 @@
 import os
 import sys
-from Venue.venue import Venue
+
+from venue.venue import Venue
 import backstage
 
 
