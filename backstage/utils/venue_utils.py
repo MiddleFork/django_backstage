@@ -1,7 +1,7 @@
 import os
 import sys
+from Venue.venue import Venue
 import backstage
-from backstage.models import Venue
 
 
 def copy_venue_skel(venue_path):

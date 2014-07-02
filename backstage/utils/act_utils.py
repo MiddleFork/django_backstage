@@ -1,9 +1,11 @@
 import os
 import tarfile
 import tempfile
+from Venue.venue import Venue
+
 import backstage
 from backstage.utils.venue_utils import use_venue
-from backstage.models import Act, Venue
+from backstage.models import Act
 
 
 def new_act(venue, actname):

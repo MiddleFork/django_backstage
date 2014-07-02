@@ -12,7 +12,7 @@ class TestDatabaseFunctionality(unittest.TestCase):
         """ Test that we can connect to the database server
         @return:
         """
-        conn = psycopg2.connect("dbname=postgres host=127.0.0.1 user=backstage")
+        conn = psycopg2.connect("dbname=backstage host=127.0.0.1 user=backstage")
 
 
     def test_create(self):
