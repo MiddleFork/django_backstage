@@ -14,7 +14,7 @@ def copy_venue_skel(venue_path):
         raise
     try:
         #Copy the contents of the 'skel' folder into the venue root
-        os.system("cp -rpv %s/* %s" % (skeldir, venue_path))
+        os.system("cp -rp %s/. %s" % (skeldir, venue_path))
 
     except:
         s = "ERROR copying the venue skel into %s" % venue_path
@@ -37,9 +37,9 @@ def create_venue_uwsgi_file(venue_base, venue_root, venue_name):
     return
 
 
-def new_venue(venue_name, venue_base):
+def new_venue(venue_name, venue_root):
         """create a new backstage venue with the given name and located at the specified path"""
-        venue_path = os.path.abspath(os.path.join(venue_base, venue_name))
+        venue_path = os.path.abspath(os.path.join(venue_root, venue_name))
         try:
             os.makedirs(venue_path)
         except:
@@ -61,12 +61,11 @@ def new_venue(venue_name, venue_base):
             raise
 
         try:
-            create_venue_uwsgi_file(venue_base, venue_path, venue_name)
+            create_venue_uwsgi_file(venue_root, venue_path, venue_name)
         except:
             s = 'Error in create_venue_wsgi_file'
             print s
             raise
-
 
         try:
             p = use_venue(venue_path)
@@ -74,62 +73,65 @@ def new_venue(venue_name, venue_base):
             raise
 
         p.build_virtualenv()
-        s = 'Successfully created Backstage venue %s at %s' % (p.VENUE_NAME, p.VENUE_ROOT)
+        s = 'Successfully created Backstage venue %s at %s' % (p.venue_name, p.VENUE_ROOT)
         print s
         return p
 
 
-def test_venue_exists(venue_root):
+def test_venue_exists(venue_path):
     """Test for the existence of a Backstage venue instance.  Return True or False"""
-    if not os.path.exists(venue_root):
-        s = 'venue folder at %s does not exist. Terminating' % venue_root
+    if not os.path.exists(venue_path):
+        s = 'venue folder at %s does not exist. Terminating' % venue_path
         print s
         return False
-    #A file named backstage.ini should exist.  Proves this is a backstage venue.  Right now it is empty
-    ini_file = os.path.join(venue_root, 'backstage.ini')
-    if not os.path.exists(ini_file):
-        s = 'Backstage INI file not found'
+    #A keyfile under .LIVE should exist.  Proves this is a backstage venue.  Right now it is empty
+    keyfilename = 'backstage-venue.txt'
+    keyfile = os.path.join(venue_path, '.LIVE', keyfilename)
+    if not os.path.exists(keyfile):
+        s = 'Backstage key file file not found'
         print s
         return False
     return True
 
 
-def use_venue(venue_root):
+def use_venue(venue_path):
     """Use an existing Backstage venue.  Returns the venue instance."""
-    exists = test_venue_exists(venue_root)
+    exists = test_venue_exists(venue_path)
     if not exists:
-        s = 'venue does not exist'
-        print s
-        raise
+        s = 'Venue does not exist'
+        raise s
 
     try:
-        backstage_venue = Venue(venue_root)
+        venue = Venue(venue_path)
+        print venue
+        dir(venue)
     except:
+        print
         raise
-    paths = [backstage_venue.VENUE_ROOT, backstage_venue.VENUE_PATH, ]
+    paths = [venue.venue_path, venue.venue_root, ]
     for pth in paths:
         if not pth in sys.path:
             sys.path.append(pth)
     try:
-        backstage_venue.get_settings()
+        venue.get_settings()
     except:
         s = 'Could not import settings'
         print s
         raise
     # paramfiles are those with parameterized variables needing to be replaced using the params dict.
-    backstage_venue.paramfiles = ['site_settings.py', 'theme_settings.py', 'wsgi.py', 'conf/gunicorn_launcher',
+    venue.paramfiles = ['site_settings.py', 'theme_settings.py', 'wsgi.py', 'conf/gunicorn_launcher',
                    'conf/nginx.conf', 'templates/index.html',
                    'conf/supervisor.conf', ]
     # this would be better in a db table
-    backstage_venue.themes = ['default', 'default24', 'fluid', 'container', 'hero', ]
+    venue.themes = ['default', 'default24', 'fluid', 'container', 'hero', ]
     try:
-        backstage_venue.connect()
+        venue.connect()
     except:
         s = 'Could not connect to database'
         raise
-    s = 'Using Backstage venue %s at %s' % (backstage_venue.VENUE_NAME, backstage_venue.VENUE_ROOT)
+    s = 'Using Backstage venue %s at %s' % (venue.venue_name, venue.venue_root)
     print s
-    return backstage_venue
+    return venue
 
 
 def venue_from_cwd():
