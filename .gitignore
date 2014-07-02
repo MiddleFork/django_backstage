@@ -1,3 +1,10 @@
+#produced by venv
+venv/bin/
+venv/include/
+venv/lib/
+venv/local/
+venv/share/
+
 # like duh
 *.pyc
 *~
