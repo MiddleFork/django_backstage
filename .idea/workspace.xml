@@ -4,11 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dfb8af9-524e-43f0-867b-6ec190543c4b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/act/act.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/utils/act_utils.py" afterPath="$PROJECT_DIR$/backstage/act/act_utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/models.py" afterPath="$PROJECT_DIR$/backstage/models.py" />
-    </list>
+    <list default="true" id="9dfb8af9-524e-43f0-867b-6ec190543c4b" name="Default" comment="" />
     <ignored path="backstage.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored mask="*.pyc" />
@@ -721,10 +717,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1602" height="981" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3774272" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="-1" y="-1" width="1802" height="1001" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3774272" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="-1" y="-1" width="1802" height="1001" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32969698" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49878642" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
