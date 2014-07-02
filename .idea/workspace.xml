@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9dfb8af9-524e-43f0-867b-6ec190543c4b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/act/act.py" afterPath="$PROJECT_DIR$/backstage/act/act.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/venue/venue.py" afterPath="$PROJECT_DIR$/backstage/venue/venue.py" />
     </list>
     <ignored path="backstage.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,11 +43,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="act.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="act.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backstage/act/act.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13432837" vertical-offset="0" max-vertical-offset="2793">
-              <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2793">
+              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -68,6 +69,18 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="189">
               <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="venue.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backstage/venue/venue.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.35820895" vertical-offset="0" max-vertical-offset="2121">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,7 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/backstage/skel/act/act_apps.py" />
         <option value="$PROJECT_DIR$/backstage/skel/act/settings.py" />
         <option value="$PROJECT_DIR$/backstage/skel/venue/venue_settings.py" />
         <option value="$PROJECT_DIR$/backstage/skel/venue/settings.py" />
@@ -153,6 +165,7 @@
         <option value="$PROJECT_DIR$/backstage/models.py" />
         <option value="$PROJECT_DIR$/backstage/shortcuts.py" />
         <option value="$PROJECT_DIR$/backstage/act/act.py" />
+        <option value="$PROJECT_DIR$/backstage/venue/venue.py" />
       </list>
     </option>
   </component>
@@ -237,6 +250,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="backstage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backstage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="django_backstage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backstage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="venue" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1024,14 +1055,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage/venue/venue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="456">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backstage/shortcuts.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
@@ -1044,9 +1067,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backstage/act/act.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13432837" vertical-offset="0" max-vertical-offset="2793">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2793">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/venue/venue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35820895" vertical-offset="0" max-vertical-offset="2121">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

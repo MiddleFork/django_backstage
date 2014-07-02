@@ -3,7 +3,7 @@ import sys
 import time
 import requests
 from backstage.utils import uwsgi_portsniffer
-from venue.venue import Venue
+from backstage.venue.venue import Venue
 
 __author__ = 'walker'
 

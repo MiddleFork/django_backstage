@@ -1,5 +1,5 @@
 import os
-from utils import uwsgi_portsniffer
+from backstage.utils import uwsgi_portsniffer
 
 __author__ = 'walker'
 
