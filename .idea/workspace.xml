@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dfb8af9-524e-43f0-867b-6ec190543c4b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/act/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backstage/act/act.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/backstage/utils/act_utils.py" afterPath="$PROJECT_DIR$/backstage/act/act_utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backstage/models.py" afterPath="$PROJECT_DIR$/backstage/models.py" />
     </list>
     <ignored path="backstage.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,21 +59,25 @@
       <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backstage/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29345372" vertical-offset="59" max-vertical-offset="2772">
-              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#688#915#0" expanded="false" />
-                <element signature="e#968#1917#0" expanded="false" />
-                <element signature="e#1956#2250#0" expanded="false" />
-                <element signature="e#2290#3100#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.094808124" vertical-offset="63" max-vertical-offset="1449">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="act.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backstage/act/act.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2793">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="venue.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backstage/Venue/venue.py">
+        <entry file="file://$PROJECT_DIR$/backstage/venue/venue.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2121">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -83,8 +89,8 @@
       <file leaf-file-name="shortcuts.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backstage/shortcuts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="210">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="189">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -171,13 +177,13 @@
         <option value="$PROJECT_DIR$/backstage/conf/uwsgi.act.ini.src" />
         <option value="$PROJECT_DIR$/backstage/version.py" />
         <option value="$PROJECT_DIR$/backstage/venue.py" />
-        <option value="$PROJECT_DIR$/backstage/act/act.py" />
         <option value="$PROJECT_DIR$/backstage/utils/venue_utils.py" />
         <option value="$PROJECT_DIR$/backstage/db/README.rst" />
         <option value="$PROJECT_DIR$/backstage/producer/README.rst" />
         <option value="$PROJECT_DIR$/backstage/db/db_tests.py" />
         <option value="$PROJECT_DIR$/backstage/shortcuts.py" />
         <option value="$PROJECT_DIR$/backstage/Venue/venue.py" />
+        <option value="$PROJECT_DIR$/backstage/act/act.py" />
         <option value="$PROJECT_DIR$/backstage/models.py" />
       </list>
     </option>
@@ -356,24 +362,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backstage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="django_backstage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backstage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Venue" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -407,11 +395,11 @@
       <recent name="$PROJECT_DIR$/backstage/skel/venue/venv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backstage/act" />
       <recent name="$PROJECT_DIR$/backstage/venue" />
       <recent name="$PROJECT_DIR$/backstage/docs" />
       <recent name="$PROJECT_DIR$/backstage/utils" />
       <recent name="$PROJECT_DIR$/backstage/utils/venue_utils.py" />
-      <recent name="$PROJECT_DIR$/backstage" />
     </key>
   </component>
   <component name="RunManager" selected="Python.site">
@@ -733,7 +721,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1602" height="981" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288835" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3774272" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="-1" y="-1" width="1802" height="1001" />
@@ -741,7 +729,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49878642" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25571066" sideWeight="0.49939394" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37371135" sideWeight="0.32242423" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37371135" sideWeight="0.32242423" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39636365" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19910847" sideWeight="0.50060606" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40412623" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -781,13 +769,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backstage/settings/venue_settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.864" vertical-offset="261" max-vertical-offset="819">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backstage/settings/misc_settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="474">
@@ -1094,18 +1075,17 @@
         <state vertical-scroll-proportion="0.6090794" vertical-offset="0" max-vertical-offset="793">
           <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#107#685#0" expanded="false" />
-            <element signature="e#757#1247#0" expanded="false" />
-            <element signature="e#1321#2391#0" expanded="false" />
-            <element signature="e#2433#2958#0" expanded="false" />
-            <element signature="e#2992#4254#0" expanded="false" />
-            <element signature="e#4283#4374#0" expanded="false" />
+            <element signature="e#108#686#0" expanded="false" />
+            <element signature="e#758#1248#0" expanded="false" />
+            <element signature="e#1322#2392#0" expanded="false" />
+            <element signature="e#2434#2959#0" expanded="false" />
+            <element signature="e#2993#4255#0" expanded="false" />
+            <element signature="e#4284#4375#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage/utils/act_utils.py">
+    <entry file="file://$PROJECT_DIR$/backstage/act/act_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1512">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1149,13 +1129,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backstage/shortcuts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="210">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="189">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backstage/Venue/venue.py">
+    <entry file="file://$PROJECT_DIR$/backstage/venue/venue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="456">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backstage/act/act.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="456">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1165,15 +1153,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backstage/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29345372" vertical-offset="59" max-vertical-offset="2772">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#688#915#0" expanded="false" />
-            <element signature="e#968#1917#0" expanded="false" />
-            <element signature="e#1956#2250#0" expanded="false" />
-            <element signature="e#2290#3100#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.094808124" vertical-offset="63" max-vertical-offset="1449">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
