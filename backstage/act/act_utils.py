@@ -1,6 +1,5 @@
 import os
 import tarfile
-
 import tempfile
 import backstage
 from backstage.shortcuts import Act, Venue
@@ -25,7 +24,6 @@ def new_act(venue, actname):
     try:
         os.mkdir(acthome)
         copy_act_skel(venue, venue.acts_root, actname)
-        create_act_uwsgi_file(venue, venue.acts_root, actname)
         keyfile = 'backstage-%s-%s.id' % (venue.venue_name, actname )
         with open(os.path.join(acthome, '.LIVE', keyfile), 'w') as kf:
             kf.write('#%s' % keyfile)
@@ -41,18 +39,6 @@ def new_act(venue, actname):
         print s
         raise None
 
-def create_act_uwsgi_file(venue, actsdir, actname):
-    """create the uwsgi ini file for a (usually) new Act. This reads in backstage/conf/uwsgi.ini.src
-    and substitutes values appropriately."""
-    srcfile = os.path.join(os.path.dirname(backstage.__file__), 'conf/uwsgi.act.ini.src')
-    with open(srcfile, 'r') as f:
-        srcdata = f.read()
-    outname = 'backstage-%s-%s.ini' % (venue.venue_name, actname)
-    outfile = os.path.join(actsdir, actname, outname)
-    o = open(outfile, 'w')
-    o.write(srcdata.format(VENUE_ROOT=venue.venue_root, VENUE_NAME=venue.venue_name, ACT_NAME=actname))
-    o.close()
-    return
 
 def copy_act_skel(venue, actsdir, actname):
     """copy the skeleton files into the Act instance folder"""

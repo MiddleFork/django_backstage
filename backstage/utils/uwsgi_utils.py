@@ -43,9 +43,6 @@ act_seeds = {
 }
 
 
-
-
-
 def start(inst):
     try:
         conn = inst.conn
@@ -66,7 +63,7 @@ def start(inst):
             print '%s found in wsgi table.\nHint try restart() to force a re-start' % (inst.name)
             return
         q = "insert into %s (name,config,ts,uid,gid) values ('%s','%s',%s,'%s','%s')" % \
-            (table, inst.name, config, ts, uid, gid)
+            (table, inst.name, inst.uwsgi_ini, ts, uid, gid)
         cur.execute(q)
         conn.commit()
         print 'start request submitted for %s' % inst.name

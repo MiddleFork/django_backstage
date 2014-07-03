@@ -3,7 +3,6 @@ import sys
 import time
 import requests
 from backstage.utils import uwsgi_portsniffer
-from backstage.venue.venue import Venue
 from backstage.utils.uwsgi_utils import start, stop, restart, build_uwsgi
 
 
