@@ -17,7 +17,7 @@ def new_act(venue, actname):
     if not isinstance(venue, Venue):
         print '%s is not a valid backstage venue' % venue
         return None
-    actsdir = os.path.join(venue.VENUE_ROOT, 'acts')
+    actsdir = os.path.join(venue.venue_home, 'acts')
     acthome = os.path.join(actsdir, actname)
     if os.path.exists(acthome):
         print 'A folder named %s already exists under %s' % (actname, actsdir)
