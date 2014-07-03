@@ -23,7 +23,7 @@ uwsgi_defaults = {
 venue_seeds = {
     'home': '{VENUE_HOME}/venv',
     'virtualenv': '{VENUE_HOME}/venv',
-    'pythonpath': '{VENUE_HOME}',
+    'pythonpath': '{VENUE_ROOT}',
     'chdir': '{VENUE_ROOT}',
     'module': '{VENUE_NAME}.wsgi:application',
     'pidfile': '{VENUE_HOME}/.LIVE/uwsgi-backstage-{VENUE_NAME}.pid',
@@ -146,7 +146,7 @@ def format_act_options(act):
     return opts
 
 
-def build_uwsgi_ini(obj, objtype):
+def build_uwsgi(obj, objtype):
     """
     build a string formatted like a uwsgi.ini file
     @return:

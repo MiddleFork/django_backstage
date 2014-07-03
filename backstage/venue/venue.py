@@ -3,6 +3,7 @@ import sys
 import subprocess
 import stat
 from backstage.utils import uwsgi_portsniffer
+from backstage.utils.uwsgi_utils import build_uwsgi
 
 class Venue():
     """A backstage Venue is a specific local install of backstage."""
@@ -36,6 +37,7 @@ class Venue():
         self.get_settings()
         self.get_acts()
         self.connect()
+        self.uwsgi_config, self.uwsgi_ini = build_uwsgi(self, 'venue')
 
     def get_settings(self):
         """ import the venue's settings.py"""

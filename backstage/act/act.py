@@ -4,7 +4,7 @@ import time
 import requests
 from backstage.utils import uwsgi_portsniffer
 from backstage.venue.venue import Venue
-from backstage.utils.uwsgi_utils import start, stop, restart
+from backstage.utils.uwsgi_utils import start, stop, restart, build_uwsgi
 
 
 __author__ = 'walker'
@@ -24,6 +24,8 @@ class Act():
         self.acthome = acthome
         self.keyfile = keyfile
         self.conn = venue.conn
+        self.uwsgi_config, self.uwsgi_ini = build_uwsgi(self, 'act')
+
 
     def start(self):
         start(self)
