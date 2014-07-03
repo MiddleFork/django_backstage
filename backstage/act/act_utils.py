@@ -40,7 +40,7 @@ def create_act_uwsgi_file(venue, actsdir, actname):
     srcfile = os.path.join(os.path.dirname(backstage.__file__), 'conf/uwsgi.act.ini.src')
     with open(srcfile, 'r') as f:
         srcdata = f.read()
-    outname = 'backstage-%s-%s.ini' % (venue.VENUE_NAME, actname)
+    outname = 'backstage-%s-%s.ini' % (venue.venue_name, actname)
     outfile = os.path.join(actsdir, actname, outname)
     o = open(outfile, 'w')
     o.write(srcdata.format(VENUE_ROOT=venue.VENUE_ROOT, VENUE_NAME=venue.VENUE_NAME, ACT_NAME=actname))
