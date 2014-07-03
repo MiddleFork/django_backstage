@@ -17,22 +17,29 @@ def new_act(venue, actname):
     if not isinstance(venue, Venue):
         print '%s is not a valid backstage venue' % venue
         return None
-    actsdir = os.path.join(venue.venue_home, 'acts')
-    acthome = os.path.join(actsdir, actname)
+    acthome = os.path.join(venue.acts_root, actname)
     if os.path.exists(acthome):
-        print 'A folder named %s already exists under %s' % (actname, actsdir)
+        print 'A folder named %s already exists under %s' % (actname, venue.acts_root)
         return None
-    os.mkdir(acthome)
-    copy_act_skel(venue, actsdir, actname)
-    create_act_uwsgi_file(venue, actsdir, actname)
 
-    act = Act(venue, actname)
-    if act:
-        s = 'created Backstage Act %s at %s' % (actname, acthome)
+    try:
+        os.mkdir(acthome)
+        copy_act_skel(venue, venue.acts_root, actname)
+        create_act_uwsgi_file(venue, venue.acts_root, actname)
+        keyfile = 'backstage-%s-%s.id' % (venue.venue_name, actname )
+        with open(os.path.join(acthome, '.LIVE', keyfile), 'w') as kf:
+            kf.write('#%s' % keyfile)
+        act = Act(venue, actname)
+        s = 'created Backstage Act %s at %s\n' % (actname, acthome)
+        s += 'using Act %s' % actname
         print s
-        s = 'using Act %s' % act
+        venue.get_acts()
+        return act
+    except:
+        s = 'something went wrong creating act.\n'
+        s += 'you need to clean up the garbage because i have yet to do that for you.\n'
         print s
-    return act
+        raise None
 
 def create_act_uwsgi_file(venue, actsdir, actname):
     """create the uwsgi ini file for a (usually) new Act. This reads in backstage/conf/uwsgi.ini.src

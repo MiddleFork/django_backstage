@@ -7,10 +7,19 @@ from backstage.venue.venue import Venue
 
 __author__ = 'walker'
 
+class Act():
 
-class Act(venue, actname):
-    actname = ''
-    venue = ''
+    def __init__(self, venue, actname):
+        acthome =os.path.join(venue.acts_root, actname)
+        kf = 'backstage-%s-%s.id' % (venue.venue_name, actname)
+        keyfile = os.path.join(acthome, '.LIVE', kf)
+        if not os.path.exists(keyfile):
+            #not a valid act
+            return
+        self.venue = venue
+        self.actname = actname
+        self.acthome = acthome
+        self.keyfile = keyfile
 
     def reload(self):
         """Reload the Act, by touching its ini file"""
@@ -25,7 +34,7 @@ class Act(venue, actname):
 
     def get_settings(self):
         syspath = sys.path
-        sys.path.insert(0,os.path.join(self.venue.VENUE_ROOT,'acts'))
+        sys.path.insert(0, os.path.join(self.venue.venue_home, 'acts'))
         exec('from %s import settings' % self.actname)
         sys.path = syspath
         settings = None
@@ -36,7 +45,7 @@ class Act(venue, actname):
         (set in backstage.backstage_settings UWSGI_VASSALS)
         """
         linkmodes = [None, 'link', 'unlink', 'relink']
-        #vassal_name = 'backstage-%s-acts-%s.ini' % (self.venue.VENUE_NAME, self.actname)
+        #vassal_name = 'backstage-%s-acts-%s.ini' % (self.venue.venue_name, self.actname)
         self.vassal_file = os.path.join(self.settings.UWSGI_VASSALS, self.uwsgifile)
         if linkmode not in linkmodes:
             return 'Usage: uwsgi_linker <%s>' % (linkmodes)

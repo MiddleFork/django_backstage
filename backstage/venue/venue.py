@@ -1,4 +1,5 @@
 import os
+import sys
 import subprocess
 import stat
 from backstage.utils import uwsgi_portsniffer
@@ -18,6 +19,20 @@ class Venue():
         #so now we have a valid venue folder structure we can instantiate the object
         self.venue_home = venue_home
         self.venue_root, self.venue_name = os.path.split(self.venue_home)
+        self.acts_root = os.path.abspath(os.path.join(self.venue_home, 'acts'))
+
+        if not self.venue_home in sys.path:
+            sys.path.insert(0, self.venue_home)
+        if not self.venue_root in sys.path:
+            sys.path.insert(0, self.venue_root)
+        if not self.acts_root in sys.path:
+            sys.path.insert(2, self.acts_root)
+        self.settings = None
+        self.acts = {}
+        self.conn = None
+        self.get_settings()
+        self.get_acts()
+        self.connect()
 
     def get_settings(self):
         """ import the venue's settings.py"""
@@ -90,13 +105,14 @@ class Venue():
     def get_acts(self):
         """get this Venue's Acts and find out about them"""
         from backstage.shortcuts import Act
-        self.acts = {}
-        acts_root = os.path.abspath(os.path.join(self.venue_home, 'acts'))
-        acts_list = os.listdir(acts_root)
+        acts_list = os.listdir(self.acts_root)
         for a in acts_list:
+            test_act = Act(self, a)
             try:
-                act = Act(self, a)
-                self.acts[a] = act
+                if 'keyfile' in test_act.__dict__:
+                    self.acts[a] = test_act
+                else:
+                    pass
             except:
                 pass
 
