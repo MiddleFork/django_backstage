@@ -19,7 +19,10 @@ class Venue():
         #so now we have a valid venue folder structure we can instantiate the object
         self.venue_home = venue_home
         self.venue_root, self.venue_name = os.path.split(self.venue_home)
+        self.name = self.venue_name
+        self.longname = 'backstage-%s' % self.venue_name
         self.acts_root = os.path.abspath(os.path.join(self.venue_home, 'acts'))
+        self.dbname = self.longname.replace('-', '_')
 
         if not self.venue_home in sys.path:
             sys.path.insert(0, self.venue_home)
@@ -47,19 +50,9 @@ class Venue():
 
     def connect(self):
         """ connect to the venue database """
-        import psycopg2
-        try:
-            db = self.settings.DATABASES['default']
-            string = "dbname=%s host=%s port=%s user=%s " % \
-                     (db['NAME'],
-                      db['HOST'],
-                      db['PORT'],
-                      db['USER']
-                     )
-            self.conn = psycopg2.connect(string)
-            return True
-        except:
-            return False
+        from backstage.db.connection import connect
+        from settings.db_settings import DBPORT
+        self.conn = connect(self.dbname, DBPORT)
 
     def dumpsettings(self):
         try:

@@ -4,6 +4,8 @@ import time
 import requests
 from backstage.utils import uwsgi_portsniffer
 from backstage.venue.venue import Venue
+from backstage.utils.uwsgi_utils import start, stop, restart
+
 
 __author__ = 'walker'
 
@@ -18,10 +20,21 @@ class Act():
             return
         self.venue = venue
         self.actname = actname
+        self.name = self.actname
         self.acthome = acthome
         self.keyfile = keyfile
+        self.conn = venue.conn
 
-    def reload(self):
+    def start(self):
+        start(self)
+
+    def stop(self):
+        stop(self)
+
+    def restart(self):
+        restart(self)
+
+    def OLDreload(self):
         """Reload the Act, by touching its ini file"""
         try:
             with file(self.uwsgifile, 'a'):

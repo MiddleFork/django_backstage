@@ -1,55 +1,99 @@
-import psycopg2
-import datetime
 import time
 
-port = 5433
-host = 'skok'
-db = 'backstage_nooksack'
-password = 'shuksan'
-user = 'walker'
+table = 'uwsgi_vassals'
 
-conn = psycopg2.connect('dbname=%s host=%s port=%s user=%s password=%s' % (db, host, port, user, password))
-cur = conn.cursor()
-
-table='uwsgi_vassals'
-
-actname = 'act1'
-uid = 'backstage'
-gid = 'adm'
 config = 'dummy text'
-ts = time.time()
+uid = 'nobody'
+gid = 'nobody'
 
-def start(self):
+def start(inst):
+    try:
+        conn = inst.conn
+        cur = conn.cursor()
+    except:
+        try:
+            conn = inst.venue.conn
+            cur = conn.cursor()
+        except:
+            print 'connection error'
+            return
     try:
         ts = time.time()
+        q = "select * from %s where name = '%s'" % (table, inst.name)
+        cur.execute(q)
+        conn.commit()
+        if cur.fetchone() != None:
+            print '%s found in wsgi table.\nHint try restart() to force a re-start' % (inst.name)
+            return
         q = "insert into %s (name,config,ts,uid,gid) values ('%s','%s',%s,'%s','%s')" % \
-            (table, self.actname, config, ts, uid, gid)
+            (table, inst.name, config, ts, uid, gid)
         cur.execute(q)
         conn.commit()
-        print 'started %s' % self.actname
+        print 'start request submitted for %s' % inst.name
     except:
-        print 'failed %s' % self.actname
+        raise
+        print 'failed to start'
         conn.rollback
+        return
+    return
 
-def stop(self):
-    q = "DELETE FROM %s WHERE name = '%s'" % (table, self.actname)
+def stop(inst):
     try:
+        conn = inst.conn
+        cur = conn.cursor()
+    except:
+        try:
+            conn = inst.venue.conn
+            cur = conn.cursor()
+        except:
+            print 'connection error'
+            return
+    try:
+        q = "SELECT * FROM %s WHERE name = '%s'" % (table, inst.name)
+        cur.execute(q)
+        res = cur.fetchone()
+        conn.commit()
+        if res is None:
+            print 'Act %s is not running' % inst.name
+            return
+    except:
+        raise
+    try:
+        q = "DELETE FROM %s WHERE name = '%s'" % (table, inst.name)
         cur.execute(q)
         conn.commit()
+        print 'stop request submitted for %s' % inst.name
     except:
-        print 'delete error'
+        print 'delete error %s' % inst.name
         conn.rollback()
     return
 
 
-def restart(self):
+def restart(inst):
     try:
-        ts = time.time()
-        q = "UPDATE %s set ts = %s where name = '%s'" % (table, ts, self.actname
-            (table, self.actname, config, ts, uid, gid)
+        conn = inst.conn
+        cur = conn.cursor()
+    except:
+        try:
+            conn = inst.venue.conn
+            cur = conn.cursor()
+        except:
+            print 'connection error'
+            return
+    try:
+        q = "SELECT * FROM %s WHERE name ='%s'" % (table, inst.name)
         cur.execute(q)
         conn.commit()
-        print 're-started %s' % self.actname
+        if cur.fetchone() == None:
+            print '%s is not running. Attempting to start.' % inst.name
+            start(inst)
+            return
+        ts = time.time()
+
+        q = "UPDATE %s set ts = %s where name = '%s'" % (table, ts, inst.name)
+        cur.execute(q)
+        conn.commit()
+        print 'submitted re-start request for %s' % inst.name
     except:
-        print 'failed %s' % self.actname
+        print 'failed %s' % inst.name
         conn.rollback
