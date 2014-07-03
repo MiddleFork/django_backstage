@@ -1,22 +1,23 @@
 import os
+import subprocess
 import stat
 from backstage.utils import uwsgi_portsniffer
 
 class Venue():
     """A backstage Venue is a specific local install of backstage."""
 
-    def __init__(self, venue_path):
+    def __init__(self, venue_home):
         """Venue folder structure must already exist before we can create and utilize
         a venue instance
         """
-        venue_secret = os.path.join(venue_path, '.LIVE/backstage-venue.txt')
+        venue_secret = os.path.join(venue_home, '.LIVE/backstage-venue.txt')
         if not os.path.exists(venue_secret):
             print 'Invalid Venue'
             print 'Hint: create a Venue first using backstage.shortcuts.new_venue'
             return None
         #so now we have a valid venue folder structure we can instantiate the object
-        self.venue_path = venue_path
-        self.venue_root, self.venue_name = os.path.split(self.venue_path)
+        self.venue_home = venue_home
+        self.venue_root, self.venue_name = os.path.split(self.venue_home)
 
     def get_settings(self):
         """ import the venue's settings.py"""
@@ -47,7 +48,7 @@ class Venue():
 
     def dumpsettings(self):
         try:
-            outfile = os.path.join(self.venue_path, 'settings_dump.py')
+            outfile = os.path.join(self.venue_home, 'settings_dump.py')
             of = open(outfile, 'w')
             my_settings = dir(self.settings)
             for my_setting in my_settings:
@@ -62,7 +63,7 @@ class Venue():
     def build_virtualenv(self):
         """build the virtual environment for this backstage venue"""
         cwd = os.getcwd()
-        venvdir = os.path.join(self.venue_path, 'venv')
+        venvdir = os.path.join(self.venue_home, 'venv')
         cmd = '%s/build_virtualenv' % (venvdir)
         st = os.stat(cmd)
         os.chmod(cmd, st.st_mode | stat.S_IEXEC)
@@ -90,7 +91,7 @@ class Venue():
         """get this Venue's Acts and find out about them"""
         from backstage.shortcuts import Act
         self.acts = {}
-        acts_root = os.path.abspath(os.path.join(self.VENUE_ROOT, 'acts'))
+        acts_root = os.path.abspath(os.path.join(self.venue_home, 'acts'))
         acts_list = os.listdir(acts_root)
         for a in acts_list:
             try:
@@ -101,5 +102,5 @@ class Venue():
 
 
     def __unicode__(self):
-        s = 'Backstage Venue instance %s at %s' % (self.VENUE_NAME, self.VENUE_ROOT)
+        s = 'Backstage Venue instance %s at %s' % (self.venue_name, self.venue_root)
         return s

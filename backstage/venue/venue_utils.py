@@ -5,7 +5,7 @@ from backstage.shortcuts import Venue
 import backstage
 
 
-def copy_venue_skel(venue_path):
+def copy_venue_skel(venue_home):
     """Populate a (usually) new backstage venue with the contents of backstage/skel"""
     skeldir = os.path.join(os.path.dirname(backstage.__file__), 'skel/venue')
     if not os.path.exists(skeldir):
@@ -14,10 +14,10 @@ def copy_venue_skel(venue_path):
         raise
     try:
         #Copy the contents of the 'skel' folder into the venue root
-        os.system("cp -rp %s/. %s" % (skeldir, venue_path))
+        os.system("cp -rp %s/. %s" % (skeldir, venue_home))
 
     except:
-        s = "ERROR copying the venue skel into %s" % venue_path
+        s = "ERROR copying the venue skel into %s" % venue_home
         print s
         raise
     return True
@@ -39,54 +39,54 @@ def create_venue_uwsgi_file(venue_base, venue_root, venue_name):
 
 def new_venue(venue_name, venue_root):
         """create a new backstage venue with the given name and located at the specified path"""
-        venue_path = os.path.abspath(os.path.join(venue_root, venue_name))
+        venue_home = os.path.abspath(os.path.join(venue_root, venue_name))
         try:
-            os.makedirs(venue_path)
+            os.makedirs(venue_home)
         except:
             print 'Error creating venue.'
             raise
 
         try:
-            with open(os.path.join(venue_path, '__init__.py'), 'w'):
+            with open(os.path.join(venue_home, '__init__.py'), 'w'):
                 pass
         except:
             err = 'ERROR with init file'
             print err
             raise
         try:
-            copy_venue_skel(venue_path)
+            copy_venue_skel(venue_home)
         except:
             s = 'Error in copy_venue_skel'
             print s
             raise
 
         try:
-            create_venue_uwsgi_file(venue_root, venue_path, venue_name)
+            create_venue_uwsgi_file(venue_root, venue_home, venue_name)
         except:
             s = 'Error in create_venue_wsgi_file'
             print s
             raise
 
         try:
-            p = use_venue(venue_path)
+            venue = use_venue(venue_home)
         except:
             raise
 
-        p.build_virtualenv()
-        s = 'Successfully created Backstage venue %s at %s' % (p.venue_name, p.VENUE_ROOT)
+        venue.build_virtualenv()
+        s = 'Successfully created Backstage venue %s at %s' % (venue.venue_name, venue.venue_root)
         print s
-        return p
+        return venue
 
 
-def test_venue_exists(venue_path):
+def test_venue_exists(venue_home):
     """Test for the existence of a Backstage venue instance.  Return True or False"""
-    if not os.path.exists(venue_path):
-        s = 'venue folder at %s does not exist. Terminating' % venue_path
+    if not os.path.exists(venue_home):
+        s = 'venue folder at %s does not exist. Terminating' % venue_home
         print s
         return False
     #A keyfile under .LIVE should exist.  Proves this is a backstage venue.  Right now it is empty
     keyfilename = 'backstage-venue.txt'
-    keyfile = os.path.join(venue_path, '.LIVE', keyfilename)
+    keyfile = os.path.join(venue_home, '.LIVE', keyfilename)
     if not os.path.exists(keyfile):
         s = 'Backstage key file file not found'
         print s
@@ -94,21 +94,21 @@ def test_venue_exists(venue_path):
     return True
 
 
-def use_venue(venue_path):
+def use_venue(venue_home):
     """Use an existing Backstage venue.  Returns the venue instance."""
-    exists = test_venue_exists(venue_path)
+    exists = test_venue_exists(venue_home)
     if not exists:
         s = 'Venue does not exist'
         raise s
 
     try:
-        venue = Venue(venue_path)
+        venue = Venue(venue_home)
         print venue
         dir(venue)
     except:
         print
         raise
-    paths = [venue.venue_path, venue.venue_root, ]
+    paths = [venue.venue_home, venue.venue_root, ]
     for pth in paths:
         if not pth in sys.path:
             sys.path.append(pth)
