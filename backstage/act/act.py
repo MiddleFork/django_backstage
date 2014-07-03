@@ -8,7 +8,7 @@ from backstage.venue.venue import Venue
 __author__ = 'walker'
 
 
-class Act():
+class Act(venue, actname):
     actname = ''
     venue = ''
 
