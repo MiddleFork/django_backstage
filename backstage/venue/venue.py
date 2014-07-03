@@ -113,3 +113,15 @@ class Venue():
     def __unicode__(self):
         s = 'Backstage Venue instance %s at %s' % (self.venue_name, self.venue_root)
         return s
+
+    def start_all_acts(self):
+        for act in self.acts.values():
+            act.start()
+
+    def stop_all_acts(self):
+        for act in self.acts.values():
+            act.stop()
+
+    def restart_all_acts(self):
+        for act in self.acts.values():
+            act.restart()

@@ -22,7 +22,6 @@ def copy_venue_skel(venue_home):
         raise
     return True
 
-
 def create_venue_uwsgi_file(venue_base, venue_root, venue_name):
     """create the uwsgi ini file for a (usually) new Venue.
     Reads backstage/config/uwsgi.venue.ini.src
