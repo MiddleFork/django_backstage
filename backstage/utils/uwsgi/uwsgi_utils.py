@@ -11,10 +11,11 @@ uwsgi_defaults = {
     'harikiri': '20',
     'log-maxsize': '100000',
     'max-requests': '1000',
-    'vacuum': 'True',
-    'disable-logging': 'True',
+    'vacuum': 'true',
+    'disable-logging': 'true',
     'uid': 'backstage',
     'gid': 'adm',
+    'logfile-choawn': 'true',
     'logfile-chmod': '666',
     }
 

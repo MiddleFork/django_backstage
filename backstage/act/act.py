@@ -90,6 +90,14 @@ class Act():
                 elapsed = time.time() - starttime
         return
 
+    def connect(self):
+        """
+        connect to the instance's default database
+        @return:
+        """
+        from backstage.db.db_utils import connect_default
+        conn = connect_default(self)
+
     def sniff_uwsgi_port(self):
         """sniff the uwsgi port from the log file. inefficient but does not require
         root access"""
