@@ -1,11 +1,16 @@
 import os
 import sys
 import time
-
 import requests
 
 from backstage.utils import uwsgi_portsniffer
 from backstage.utils.uwsgi.uwsgi_utils import build_uwsgi
+
+# Choose one of the below as the default uwsgi emperor vassal control:
+from backstage.utils.uwsgi.linker_file_ini import start, stop, restart
+#from backstage.utils.uwsgi.linker_pg_plugin import start, stop, restart
+
+
 from backstage.shortcuts import start, stop, restart
 
 

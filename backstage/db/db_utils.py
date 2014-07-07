@@ -3,8 +3,10 @@ __author__ = 'walker'
 db_utils
 Utils for working with backstage databases
 """
+import os.environ
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
+from django.core.management import call_command
 
 def get_dsn(inst):
     """ build the psycopg2 connection dsn
@@ -47,15 +49,22 @@ def connect_default(inst):
         return conn
     except psycopg2.OperationalError, e:
         if 'does not exist' in str(e):
-            s = str(e)
-            s += 'Hint: try "backstage.db.db_utils.create"'
+            s = str(e).replace('FATAL:', '').strip()
+            s += '\nHint: try "backstage.db.db_utils.create_default()"'
             print s
             return None
         else:
             print e
             return
 
-def sync_
+def sync_default(inst):
+    """
+    Sync the default database
+    @param inst:
+    @return:
+    """
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", '%s.settings' % inst.name)
+    call_command('syncdb', interactive=False)
 
 def create_default(inst):
     """
