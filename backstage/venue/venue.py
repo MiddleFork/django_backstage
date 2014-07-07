@@ -5,7 +5,7 @@ import stat
 
 from backstage.utils import uwsgi_portsniffer
 from backstage.utils.uwsgi.uwsgi_utils import build_uwsgi
-
+from backstage.db.db_utils import create_default
 
 class Venue():
     """A backstage Venue is a specific local install of backstage."""
@@ -38,8 +38,12 @@ class Venue():
         self.conn = None
         self.get_settings()
         self.get_acts()
-        self.connect()
         self.uwsgi_config, self.uwsgi_ini = build_uwsgi(self, 'venue')
+        try:
+            self.connect()
+        except:
+            print 'OK, continuing, you can create the database later'
+        return
 
     def get_settings(self):
         """ import the venue's settings.py"""
@@ -54,10 +58,38 @@ class Venue():
             raise
 
     def connect(self):
-        """ connect to the venue database """
-        from backstage.db.connection import connect
-        from settings.db_settings import DBPORT
-        self.conn = connect(self.dbname, DBPORT)
+        """
+        connect to the instance's default database
+        @return:
+        """
+        from backstage.db.db_utils import connect_default
+        self.conn = connect_default(self)
+
+    def create_all_act_dbs(self):
+        for actname, actinstance in self.acts.iteritems():
+            a = actinstance
+            try:
+                create_default(a)
+            except:
+                pass
+        self.connect_all_act_dbs()
+
+    def connect_all_act_dbs(self):
+        """
+        try to connect to all act databases
+        @return:
+        """
+        act_connections = {}
+        for k, v in self.acts.iteritems():
+            name = k
+            instance = v
+            try:
+                instance.connect()
+                act_connections[name] = instance.conn.dsn
+            except:
+                act_connections[name] = None
+        self.act_connections = act_connections
+        return
 
     def dumpsettings(self):
         try:

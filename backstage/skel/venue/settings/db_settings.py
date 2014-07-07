@@ -6,14 +6,15 @@ and is named django_backstage.sq3.
 """
 f = os.path.abspath(__file__)
 settings_dir = os.path.dirname(f)
-venue_dir = os.path.dirname(settings_dir)
+venue_dir, settings_name = os.path.split(settings_dir)
+venue_parent, venue_name = os.path.split(venue_dir)
 
-DBENGINE = 'django.db.backends.sqlite3'
+DBENGINE = 'django.db.backends.postgresql_psycopg2'
 DBHOST = '127.0.0.1'
-DBPORT = ''
+DBPORT = '5432'
 DBUSER = 'backstage'
 DBPASS = ''
-DBNAME = os.path.join(venue_dir, 'db/django_backstage.sq3')
+DBNAME = 'backstage_%s' % venue_name
 
 DATABASES = {}
 DATABASES['default'] = {

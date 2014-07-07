@@ -11,6 +11,11 @@ def get_dsn(inst):
     @param inst:
     @return:
     """
+    try:
+        if inst.dsn is not None and inst.dsn_backstage is not None:
+            return inst.dsn, inst.dsn_backstage
+    except:
+        pass
     db = get_default_db(inst)
     #dsn for the default database
     dsn = "dbname=%s port=%s host=%s" % (db['NAME'], db['PORT'], db['HOST'])
@@ -50,7 +55,7 @@ def connect_default(inst):
             print e
             return
 
-
+def sync_
 
 def create_default(inst):
     """

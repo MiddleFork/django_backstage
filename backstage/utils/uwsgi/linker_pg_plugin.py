@@ -10,15 +10,11 @@ from backstage.utils.uwsgi.uwsgi_utils import table, uid, gid
 
 def start(inst):
     try:
-        conn = inst.conn
+        conn = inst.connect()
         cur = conn.cursor()
     except:
-        try:
-            conn = inst.venue.conn
-            cur = conn.cursor()
-        except:
-            print 'connection error'
-            return
+        print 'connection error'
+        return
     try:
         ts = time.time()
         q = "select * from %s where name = '%s.ini'" % (table, inst.name)
@@ -36,21 +32,18 @@ def start(inst):
         raise
         print 'failed to start'
         conn.rollback
-        return
+    cur.close()
+    conn.close()
     return
 
 
 def stop(inst):
     try:
-        conn = inst.conn
+        conn = inst.connect()
         cur = conn.cursor()
     except:
-        try:
-            conn = inst.venue.conn
-            cur = conn.cursor()
-        except:
-            print 'connection error'
-            return
+        print 'connection error'
+        return
     try:
         q = "SELECT * FROM %s WHERE name = '%s.ini'" % (table, inst.name)
         cur.execute(q)
@@ -60,29 +53,31 @@ def stop(inst):
             print 'Act %s is not running' % inst.name
             return
     except:
+        cur.close()
+        conn.close()
         raise
     try:
         q = "DELETE FROM %s WHERE name = '%s.ini'" % (table, inst.name)
         cur.execute(q)
         conn.commit()
+        cur.close()
+        conn.close()
         print 'stop request submitted for %s' % inst.name
     except:
         print 'delete error %s' % inst.name
         conn.rollback()
+        cur.close()
+        conn.close()
     return
 
 
 def restart(inst):
     try:
-        conn = inst.conn
+        conn = inst.connect()
         cur = conn.cursor()
     except:
-        try:
-            conn = inst.venue.conn
-            cur = conn.cursor()
-        except:
-            print 'connection error'
-            return
+        print 'connection error'
+        return
     try:
         q = "SELECT * FROM %s WHERE name ='%s.ini'" % (table, inst.name)
         cur.execute(q)
@@ -90,13 +85,19 @@ def restart(inst):
         if cur.fetchone() == None:
             print '%s is not running. Attempting to start.' % inst.name
             start(inst)
+            cur.close()
+            conn.close()
             return
         ts = time.time()
 
         q = "UPDATE %s set ts = %s where name = '%s.ini'" % (table, ts, inst.name)
         cur.execute(q)
         conn.commit()
+        cur.close()
+        conn.close()
         print 'submitted re-start request for %s' % inst.name
     except:
         print 'failed %s' % inst.name
         conn.rollback
+        cur.close()
+        conn.close()
