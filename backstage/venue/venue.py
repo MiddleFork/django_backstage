@@ -2,8 +2,10 @@ import os
 import sys
 import subprocess
 import stat
+
 from backstage.utils import uwsgi_portsniffer
-from backstage.utils.uwsgi_utils import build_uwsgi
+from backstage.utils.uwsgi.uwsgi_utils import build_uwsgi
+
 
 class Venue():
     """A backstage Venue is a specific local install of backstage."""
@@ -18,7 +20,7 @@ class Venue():
             print 'Hint: create a Venue first using backstage.shortcuts.new_venue'
             return None
         #so now we have a valid venue folder structure we can instantiate the object
-        self.venue_home = venue_home
+        self.venue_home = venue_home.rstrip('/') # or it will play with the auto pathing
         self.venue_root, self.venue_name = os.path.split(self.venue_home)
         self.name = self.venue_name
         self.longname = 'backstage-%s' % self.venue_name
@@ -48,6 +50,7 @@ class Venue():
             self.settings = settings
             return True
         except:
+            print 'error getting venue settings'
             raise
 
     def connect(self):
@@ -110,7 +113,6 @@ class Venue():
                     pass
             except:
                 pass
-
 
     def __unicode__(self):
         s = 'Backstage Venue instance %s at %s' % (self.venue_name, self.venue_root)

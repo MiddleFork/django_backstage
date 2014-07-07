@@ -1,17 +1,18 @@
 import os
 import sys
 import time
+
 import requests
+
 from backstage.utils import uwsgi_portsniffer
-from backstage.utils.uwsgi_utils import start, stop, restart, build_uwsgi
+from backstage.utils.uwsgi.uwsgi_utils import build_uwsgi
+from backstage.shortcuts import start, stop, restart
 
-
-__author__ = 'walker'
 
 class Act():
 
     def __init__(self, venue, actname):
-        acthome =os.path.join(venue.acts_root, actname)
+        acthome = os.path.join(venue.acts_root, actname)
         kf = 'backstage-%s-%s.id' % (venue.venue_name, actname)
         keyfile = os.path.join(acthome, '.LIVE', kf)
         if not os.path.exists(keyfile):
@@ -21,10 +22,18 @@ class Act():
         self.actname = actname
         self.name = self.actname
         self.acthome = acthome
+        self.longname = 'backstage-%s-%s' % (self.venue.name, self.name)
         self.keyfile = keyfile
         self.conn = venue.conn
+        self.get_settings()
         self.uwsgi_config, self.uwsgi_ini = build_uwsgi(self, 'act')
-
+        inifile = '%s.ini' % self.longname
+        self.uwsgi_file = os.path.join(self.acthome, inifile)
+        self.uwsgi_vassal = os.path.join(self.settings.UWSGI_VASSALS, inifile)
+        #necessary for file-based uwsgi linking
+        if not os.path.exists(self.uwsgi_file):
+            with open(self.uwsgi_file, 'w') as f:
+                f.write(self.uwsgi_ini)
 
     def start(self):
         start(self)
@@ -35,47 +44,15 @@ class Act():
     def restart(self):
         restart(self)
 
-    def OLDreload(self):
-        """Reload the Act, by touching its ini file"""
-        try:
-            with file(self.uwsgifile, 'a'):
-                os.utime(self.uwsgifile, None)
-        except IOError:
-            print 'Could not update, permission denied.'
-            return
-        self.get_uwsgi_port()
-        return
-
     def get_settings(self):
         syspath = sys.path
         sys.path.insert(0, os.path.join(self.venue.venue_home, 'acts'))
+        settings = None
         exec('from %s import settings' % self.actname)
         sys.path = syspath
-        settings = None
         self.settings = settings
+        return
 
-    def uwsgi_linker(self, linkmode=None):
-        """Links the uwsgi.ini file to the uwsgi emperor's vassals directory
-        (set in backstage.backstage_settings UWSGI_VASSALS)
-        """
-        linkmodes = [None, 'link', 'unlink', 'relink']
-        #vassal_name = 'backstage-%s-acts-%s.ini' % (self.venue.venue_name, self.actname)
-        self.vassal_file = os.path.join(self.settings.UWSGI_VASSALS, self.uwsgifile)
-        if linkmode not in linkmodes:
-            return 'Usage: uwsgi_linker <%s>' % (linkmodes)
-        if linkmode == None:
-            pass
-        elif linkmode == 'link':
-            os.symlink(self.uwsgifile, self.vassal_file)
-            self.get_uwsgi_port()
-        elif linkmode == 'unlink':
-            os.unlink(self.vassal_file)
-            self.uwsgi_port = None
-        elif linkmode == 'relink':
-            os.unlink(self.vassal_file)
-            self.uwsgi_port = None
-            os.symlink(self.uwsgifile, self.vassal_file)
-            self.get_uwsgi_port()
 
     def get_uwsgi_log(self):
         fo = open(self.uwsgifile, 'r')
