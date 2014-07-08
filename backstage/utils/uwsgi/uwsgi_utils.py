@@ -79,3 +79,4 @@ def format_venue_options(venue):
     for k, v in venue_seeds.iteritems():
         opts[k] = v.format(VENUE_HOME=venue.venue_home, VENUE_NAME=venue.venue_name, VENUE_ROOT=venue.venue_root)
     return opts
+

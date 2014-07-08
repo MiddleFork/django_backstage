@@ -3,6 +3,7 @@ __author__ = 'walker'
 db_utils
 Utils for working with backstage databases
 """
+import os
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from django.core.management import call_command
@@ -41,6 +42,11 @@ def get_default_db(inst):
 
 
 def connect_default(inst):
+    """
+    Connect this instance to its default database, as defined in settings
+    @param inst: Backstage Act or Venue instance
+    @return:
+    """
     try:
         dsn, dsn_backstage = get_dsn(inst)
         conn = psycopg2.connect(dsn)
@@ -63,7 +69,16 @@ def sync_default(inst):
     @return:
     """
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", '%s.settings' % inst.name)
-    call_command('syncdb', interactive=False)
+    call_command('syncdb', verbosity=0, interactive=False)
+
+def migrate_default(inst):
+    """
+    Migrate the default database
+    @param inst:
+    @return:
+    """
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", '%s.settings' % inst.name)
+    call_command('migrate', interactive=False, verbosity=0)
 
 def create_default(inst):
     """
