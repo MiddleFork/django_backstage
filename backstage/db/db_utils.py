@@ -6,6 +6,7 @@ Utils for working with backstage databases
 import os
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
+from django.conf import settings
 from django.core.management import call_command
 
 def get_dsn(inst):
@@ -63,13 +64,15 @@ def connect_default(inst):
             return
 
 def sync_default(inst):
+
     """
     Sync the default database
     @param inst:
     @return:
     """
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", '%s.settings' % inst.name)
-    call_command('syncdb', verbosity=0, interactive=False)
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', '%s.settings' % inst.name)
+    os.environ['DJANGO_SETTINGS_MODULE'] = '%s.settings' % inst.name
+    call_command('syncdb', verbosity=0, interactive=False, settings='%s.settings' % inst.name)
 
 def migrate_default(inst):
     """
@@ -77,8 +80,9 @@ def migrate_default(inst):
     @param inst:
     @return:
     """
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", '%s.settings' % inst.name)
-    call_command('migrate', interactive=False, verbosity=0)
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', '%s.settings' % inst.name)
+    os.environ['DJANGO_SETTINGS_MODULE'] = '%s.settings' % inst.name
+    call_command('migrate', interactive=False, verbosity=0, settings='%s.settings' % inst.name)
 
 def create_default(inst):
     """
