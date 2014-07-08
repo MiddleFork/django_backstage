@@ -3,7 +3,6 @@ __author__ = 'walker'
 db_utils
 Utils for working with backstage databases
 """
-import os.environ
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 from django.core.management import call_command

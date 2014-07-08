@@ -4,7 +4,7 @@ import time
 """uwsgi_portsniffer.py
 """
 
-def get_uwsgi_port(WSGI_INI):
+def get_uwsgi_port(inst):
         """Get the uwsgi port using lsof.  Requires that lsof and fuser be suid root"""
         start_port = None
         timeout = 10
@@ -16,7 +16,7 @@ def get_uwsgi_port(WSGI_INI):
         uwsgi_port = None
         while not valid and elapsed < timeout:
             try:
-                fullport = port_from_lsof(WSGI_INI)
+                fullport = port_from_lsof(inst)
                 new_ip, new_port = fullport.split(':')
                 if new_port != start_port:
                     uwsgi_ip = new_ip
@@ -32,19 +32,12 @@ def get_uwsgi_port(WSGI_INI):
 
 
 
-def port_from_lsof(inifile):
+def port_from_lsof(inst):
     try:
-        with open(inifile,'r') as f:
-            inidata = f.readlines()
-        for l in inidata:
-            l = l.strip()
-            if l[0:7] == 'pidfile':
-                pidfile = l.split('=')[1].strip()
-                break
-    except IOError:
-        err = 'No Such File: %s' % inifile
-        print err
-        return None
+        pidfile = inst.uwsgi_config['pidfile']
+    except:
+        print 'could not determine the socket PID file'
+        raise
     try:
         with open(pidfile, 'r') as f:
             pid = f.readline().strip()

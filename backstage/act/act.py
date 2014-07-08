@@ -11,9 +11,6 @@ from backstage.utils.uwsgi.linker_file_ini import start, stop, restart
 #from backstage.utils.uwsgi.linker_pg_plugin import start, stop, restart
 
 
-from backstage.shortcuts import start, stop, restart
-
-
 class Act():
 
     def __init__(self, venue, actname):
@@ -36,6 +33,8 @@ class Act():
         self.uwsgi_file = os.path.join(self.acthome, inifile)
         self.uwsgi_vassal = os.path.join(self.settings.UWSGI_VASSALS, inifile)
         #necessary for file-based uwsgi linking
+        self.uwsgi_ip = None
+        self.uwsgi_port = None
         if not os.path.exists(self.uwsgi_file):
             with open(self.uwsgi_file, 'w') as f:
                 f.write(self.uwsgi_ini)
@@ -81,7 +80,7 @@ class Act():
         valid = False
         while not valid and elapsed < timeout:
             try:
-                fullport = uwsgi_portsniffer.port_from_lsof(self.vassal_file)
+                fullport = uwsgi_portsniffer.port_from_lsof(self)
                 new_ip, new_port = fullport.split(':')
                 if new_port <> start_port:
                     self.uwsgi_ip = new_ip

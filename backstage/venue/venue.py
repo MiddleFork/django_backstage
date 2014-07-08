@@ -118,7 +118,7 @@ class Venue():
         return
 
     def get_uwsgi_port(self):
-        self.uwsgi_ip, self.uwsgi_port = uwsgi_portsniffer.get_uwsgi_port(self.uwsgi_ini)
+        self.uwsgi_ip, self.uwsgi_port = uwsgi_portsniffer.get_uwsgi_port(self)
         return
 
     def reload(self):
