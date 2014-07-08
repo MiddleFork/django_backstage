@@ -1,0 +1,14 @@
+server
+{{
+    server_name {server_list_string};
+    listen {listen_addr};
+    access_log /var/log/nginx/{longname}.log;
+    error_log /var/log/nginx/{longname}.error.log;
+   location /static/ {{
+        alias {venue_path}/acts/{longname}/cstatic/;
+   	}}
+   location / {{
+       	uwsgi_pass unix:{venue_path}/.LIVE/uwsgi-{longname}.sock;
+	include uwsgi_params;
+    }}
+}}

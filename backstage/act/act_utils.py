@@ -58,3 +58,4 @@ def copy_act_skel(venue, actsdir, actname):
     tar_file.extractall(act_home)
     tar_file.close()
     os.remove(tmpfile.name)
+

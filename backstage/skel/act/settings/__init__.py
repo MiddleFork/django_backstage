@@ -34,5 +34,24 @@ for act in ACT_APPS:
     act in INSTALLED_APPS or INSTALLED_APPS.append(act)
 INSTALLED_APPS.insert(0, ACT_NAME)
 
+try:
+    from act_settings import WWW_DEFAULT_HOSTS
+except ImportError:
+    WWW_DEFAULT_HOSTS = ['', 'www']
+try:
+    from act_settings import WWW_DEFAULT_TLD
+except ImportError:
+    WWW_DEFAULT_TLD = 'com'
+try:
+    from act_settings import WWW_SERVER_NAME_LIST
+except ImportError:
+    WWW_SERVER_NAME_LIST = []
+if len(WWW_SERVER_NAME_LIST) == 0:
+    for h in WWW_DEFAULT_HOSTS:
+        server = '%s.%s.%s' % (h, ACT_NAME, WWW_DEFAULT_TLD)
+        server = server.lstrip('.')
+        WWW_SERVER_NAME_LIST.append(server)
+WWW_SERVER_NAMES = ' '.join(WWW_SERVER_NAME_LIST)
+
 del p,n2
 sys.path = syspath
