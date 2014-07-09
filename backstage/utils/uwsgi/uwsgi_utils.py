@@ -15,7 +15,7 @@ uwsgi_defaults = {
     'disable-logging': 'true',
     'uid': 'backstage',
     'gid': 'adm',
-    'logfile-choawn': 'true',
+    'logfile-chown': 'true',
     'logfile-chmod': '666',
     }
 

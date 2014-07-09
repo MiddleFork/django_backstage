@@ -1,8 +1,10 @@
 #act_settings.py
 SITE_ID = 1
 SITE_DB = 'None'
-DEBUG = False
-TEMPLATE_DEBUG = False
+#very weird bug causes nginx to throw 400 errors if debug = False
+#so do not do that!
+DEBUG = True
+TEMPLATE_DEBUG = True
 
 ACT_APPS = [] # APPS to include in INSTALLED_APPS
 
