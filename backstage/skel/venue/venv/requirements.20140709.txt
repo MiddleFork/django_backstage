@@ -15,10 +15,12 @@ django-debug-toolbar
 django-extensions
 django-sekizai
 django-selectable
+django-simple-captcha
 docutils
 ecdsa
 filebrowser-safe
 future
+Fuzzy
 grappelli-safe
 html5lib
 oauthlib
@@ -30,6 +32,7 @@ pytz
 requests
 requests-oauthlib
 setuptools-git
+simplejson
 six
 sqlparse
 tzlocal
