@@ -24,7 +24,8 @@ DATABASES['default']['NAME'] = 'backstage_%s_%s' % (VENUE_NAME, ACT_NAME)
 from act_settings import *
 
 
-TEMPLATE_DIRS.insert(0, ACT_NAME + '/templates')
+STATIC_ROOT = os.path.abspath(os.path.join(ACT_HOME, 'cstatic')) #Collected Static
+
 TEMPLATE_DIRS.append('%s/instruments/local/templates' % VENUE_ROOT)
 TEMPLATE_DIRS.append('%s/instruments/local/templates/ads' % VENUE_ROOT)
 
@@ -32,7 +33,6 @@ ROOT_URLCONF = '%s.urls' % (ACT_NAME)
 
 for act in ACT_APPS:
     act in INSTALLED_APPS or INSTALLED_APPS.append(act)
-INSTALLED_APPS.insert(0, ACT_NAME)
 
 try:
     from act_settings import WWW_DEFAULT_HOSTS

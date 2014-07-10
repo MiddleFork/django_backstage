@@ -26,7 +26,7 @@ def build_nginx_conf(instance):
         venue_path = instance.venue.venue_home
     elif isinstance(instance, Venue):
         venue_path = instance.venue_home
-    confdata = confdata.format(longname=longname, venue_path=venue_path, server_list_string=server_list_string, listen_addr=listen_addr)
+    confdata = confdata.format(name=instance.name, longname=longname, venue_path=venue_path, server_list_string=server_list_string, listen_addr=listen_addr)
     of.write(confdata)
     of.close()
     return

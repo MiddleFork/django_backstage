@@ -5,7 +5,7 @@ server
     access_log /var/log/nginx/{longname}.log;
     error_log /var/log/nginx/{longname}.error.log;
    location /static/ {{
-        alias {venue_path}/acts/{longname}/cstatic/;
+        alias {venue_path}/acts/{name}/cstatic/;
    	}}
    location / {{
        	uwsgi_pass unix:{venue_path}/.LIVE/uwsgi-{longname}.sock;

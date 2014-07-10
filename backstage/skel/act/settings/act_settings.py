@@ -6,6 +6,7 @@ SITE_DB = 'None'
 DEBUG = True
 TEMPLATE_DEBUG = True
 
+
 ACT_APPS = [] # APPS to include in INSTALLED_APPS
 
 WWW_DEFAULT_TLD = '.com'
