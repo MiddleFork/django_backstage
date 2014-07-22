@@ -32,8 +32,8 @@ So, what does backstage do?
 -Backstage integrates with uWSGI and allows you to stop and restart Acts on the fly without restarting the web server.
 
 Getting Started:
-``pip install django_backstage\n
-from backstage.shortcuts import new_venue, new_act\n
+``pip install django_backstage
+|from backstage.shortcuts import new_venue, new_act\n
 venue = new_venue('MyVenue', '/tmp') # create a new venue named 'MyVenue' and place it in the /tmp folder.
 # this will build the Virtual Environment for the Venue
 act = new_act(venue,'MyAct') # creates a new Act at MyVenue/acts/MyAct and immediately launches it as a uWSGI application, using the Venue's virtual environment.
