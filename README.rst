@@ -35,14 +35,14 @@ Getting Started:
 
 ::
 
-pip install django_backstage
-from backstage.shortcuts import new_venue, new_act\n
-venue = new_venue('MyVenue', '/tmp') # create a new venue named 'MyVenue' and place it in the /tmp folder.
-# this will build the Virtual Environment for the Venue
-act = new_act(venue,'MyAct') # creates a new Act at MyVenue/acts/MyAct and immediately launches it as a uWSGI application, using the Venue's virtual environment.
-act.get_uwsgi_port() # return the port the Act is bound to.
-# you can now point your browser to http://localhost:PORT to view your running Act (no need to ever run manage.py runserver ever again!)
-act.stop() # stop a running Act
-act.start() # start an Act``
+    pip install django_backstage
+    from backstage.shortcuts import new_venue, new_act\n
+    venue = new_venue('MyVenue', '/tmp') # create a new venue named 'MyVenue' and place it in the /tmp folder.
+    # this will build the Virtual Environment for the Venue
+    act = new_act(venue,'MyAct') # creates a new Act at MyVenue/acts/MyAct and immediately launches it as a uWSGI application, using the Venue's virtual environment.
+    act.get_uwsgi_port() # return the port the Act is bound to.
+    # you can now point your browser to http://localhost:PORT to view your running Act (no need to ever run manage.py runserver ever again!)
+    act.stop() # stop a running Act
+    act.start() # start an Act``
 
 Those are the basics for now.
