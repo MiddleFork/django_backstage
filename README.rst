@@ -26,17 +26,20 @@ class Venue:
 class Act:
     """An Act is essentially a runnable Django application.   (Runnable, not necessarily Running.)  The analogy is a musical Act (performer, ensemble, group, etc.)  Miles Davis sometimes had the reputation of being reclusive. Davis may have gone periods between performances, but remained a musical Act all the while.   It's the existence, not their performance (in the case of musicians) that define them as Acts; likewise it is the existence of your app, not the fact that it is running, that defines it as an Act."""
 
-So, what does backstage do?  Backstage allows you to create and launch Django projects and apps extremely quickly.
-It handles building and deploying the python virtual environment.
-Backstage integrates with uWSGI and allows you to stop and restart Acts on the fly without restarting the web server.
+So, what does backstage do?
+-Backstage allows you to create and launch Django projects and apps extremely quickly.
+-It handles building and deploying the python virtual environment.
+-Backstage integrates with uWSGI and allows you to stop and restart Acts on the fly without restarting the web server.
 
 Getting Started:
-pip install django_backstage
-from backstage.shortcuts import new_venue, new_act
-venue = new_venue('MyVenue', '/tmp') # create a new venue named 'MyVenue' and place it in the /tmp folder.
-# this will build the Virtual Environment for the Venue
-act = new_act(venue,'MyAct') # creates a new Act at MyVenue/acts/MyAct and immediately launches it as a uWSGI application, using the Venue's virtual environment.
-act.get_uwsgi_port() # return the port the Act is bound to.
-# you can now point your browser to http://localhost:PORT to view your running Act (no need to ever run manage.py runserver ever again!)
+``pip install django_backstage``
+``from backstage.shortcuts import new_venue, new_act``
+``venue = new_venue('MyVenue', '/tmp') # create a new venue named 'MyVenue' and place it in the /tmp folder.``
+``# this will build the Virtual Environment for the Venue``
+``act = new_act(venue,'MyAct') # creates a new Act at MyVenue/acts/MyAct and immediately launches it as a uWSGI application, using the Venue's virtual environment.``
+``act.get_uwsgi_port() # return the port the Act is bound to.``
+``# you can now point your browser to http://localhost:PORT to view your running Act (no need to ever run manage.py runserver ever again!)``
+``act.stop() # stop a running Act``
+``act.start() # start an Act``
 
 Those are the basics for now.
