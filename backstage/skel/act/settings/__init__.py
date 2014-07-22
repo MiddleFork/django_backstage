@@ -18,7 +18,10 @@ exec('from %s.settings import *' % VENUE_NAME)
 
 from theme_settings import *
 
-from db_settings import DATABASES
+from db_settings import DATABASES as ACT_DATABASES
+for db in ACT_DATABASES.items():
+    DATABASES[db[0]] = db[1]
+
 DATABASES['default']['NAME'] = 'backstage_%s_%s' % (VENUE_NAME, ACT_NAME)
 
 from act_settings import *
