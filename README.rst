@@ -18,40 +18,25 @@ We need a new way to talk about and manage these services.
 
 So, we introduce here the Django Backstage project and use (and probably over-abuse) a Jazz metaphor to represent its structural and functional components:
 
-class Act:
-    """An Act is essentially a runnable Django application.   (Runnable, not necessarily Running.)  The analogy is a musical Act (performer, ensemble, group, etc.)  Miles Davis sometimes had the reputation of being reclusive. Davis may have gone periods between performances, but remained a musical Act all the while.   It's the existence, not their performance (in the case of musicians) that define them as Acts; likewise it is the existence of your app, not the fact that it is running, that defines it as an Act."""
-    class Manager:
-        """Naturally, an Act must have a Manager (act.manager).  Think:  Reuben Kincaid (The Partridge Family), Colonel Tom Parker (Elvis).
-
-class Stage:
-    """A Stage is an environment in which your Act can run, just as a musical Stage is a physical space where an Act can play music.  Here, we will build and use a stage using Virtualenv, uWsgi and Nginx, though we could conceivably fashion a stage using gunicorn/supervisor or something else.
-"""
-    class Manager:
-        """Our Stage Manager (stage.manager) works with the uWsgi Emperor to start/stop/add/remove/modify Sess(ion)s.  Internally, that means working with Apps' uwsgi.ini files; externally, that means the StageManager needs elevated system-level privileges to add/remove links to /etc/uwsgi-emperor/vassals.   A properly designed naming scheme for uwsgi.ini files/links will minimize chances for conflicts with other running Backstage instances (Productions).
-"""
-    class Set:
-        """A Stage Set (stage.set) is the collection of installed apps (instruments), styles, scripts (lights and props, etc)"""
-
-class Sess:
-        """A Sess (Session) is an Act playing on a Stage.  It's a Django App running under uWsgi. It exposes a port and/or socket on the local host.  It's like jamming in the garage.  Sure you're playing music, but (aside from the angry neighbors) nobody in the external world hears or knows about it.  (We use the diminutive 'Sess' instead of 'Session' to avoid conflict with Django Sessions).
-"""
 
 class Venue:
-        """A Venue is a DNS namespace, such as example.com, or private equivalent. A Venue itself is content-agnostic.  If you want, it could display pictures of kittens (if you have a kittens Act) or it could display cupcake recipes (if you have a cupcakes Act).  It may contain no content (no Booked Act).  In the musical world, a Venue is a (public or private) location where people may go to listen to music.  Depending on the Act, it could be Jazz on Friday and HipHop on Saturday.  It could be closed on Sunday (no content).
-"""
+    In Backstage, a Venue is analogous to a plain vanilla Django project.  Just as a project may have a number of Apps, a Venue may have a number of Acts.
+    The Venue is also the top-level of a virtual environment.  Think: VENue = Virtual ENvironment to help remember.
 
-class Gig:
-"""A Gig is a live running website.  It is an Act, Booked and playing a Sess on Stage at a Venue.   It is "Live And In Concert."
-"""
+class Act:
+    """An Act is essentially a runnable Django application.   (Runnable, not necessarily Running.)  The analogy is a musical Act (performer, ensemble, group, etc.)  Miles Davis sometimes had the reputation of being reclusive. Davis may have gone periods between performances, but remained a musical Act all the while.   It's the existence, not their performance (in the case of musicians) that define them as Acts; likewise it is the existence of your app, not the fact that it is running, that defines it as an Act."""
 
-class Production:
-"""A Production is a single Backstage instance and the superset of its content."""
-    class Manager:
-        """The Production Manager has control over the entire Production.  Notably, coordinates the activities of the Act, bcegmnqrstuvxStage and Booking Managers.   An Act doesn't even get to play a jam Sess(ion), let alone have a Gig at a Venue, unless and until the Production Manager says so. """
-===
+So, what does backstage do?  Backstage allows you to create and launch Django projects and apps extremely quickly.
+It handles building and deploying the python virtual environment.
+Backstage integrates with uWSGI and allows you to stop and restart Acts on the fly without restarting the web server.
 
-class
+Getting Started:
+pip install django_backstage
+from backstage.shortcuts import new_venue, new_act
+venue = new_venue('MyVenue', '/tmp') # create a new venue named 'MyVenue' and place it in the /tmp folder.
+# this will build the Virtual Environment for the Venue
+act = new_act(venue,'MyAct') # creates a new Act at MyVenue/acts/MyAct and immediately launches it as a uWSGI application, using the Venue's virtual environment.
+act.get_uwsgi_port() # return the port the Act is bound to.
+# you can now point your browser to http://localhost:PORT to view your running Act (no need to ever run manage.py runserver ever again!)
 
-Producer (PowerDNS)   One enterprise-wide
-The Producer manages our DNS to
-Optional/Not Currently Implemented
+Those are the basics for now.
