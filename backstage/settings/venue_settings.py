@@ -21,7 +21,7 @@ EMAIL_USE_TLS = True
 INTERNAL_IPS=('127.0.0.1',)
 
 #location of templates
-venue_TEMPLATE_DIRS = ['venue/templates',]
+venue_TEMPLATE_DIRS = []
 
 
 #context processors

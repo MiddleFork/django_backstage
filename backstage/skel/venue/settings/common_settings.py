@@ -39,3 +39,10 @@ INSTALLED_APPS.append('django.contrib.gis')
 s = "INSTALLED_APPS.append('%s.instruments.local')" % VENUE_NAME
 exec(s)
 del(s)
+
+#Extend TEMPLATE_DIRS
+venue_templates = '%s/templates' % VENUE_ROOT
+venue_templates in TEMPLATE_DIRS or TEMPLATE_DIRS.append(venue_templates)
+pagetree_templates = '%s/pagetree' % venue_templates
+pagetree_templates in TEMPLATE_DIRS or TEMPLATE_DIRS.append(pagetree_templates)
+del(venue_templates, pagetree_templates)

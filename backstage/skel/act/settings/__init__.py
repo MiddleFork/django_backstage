@@ -26,7 +26,7 @@ DATABASES['default']['NAME'] = 'backstage_%s_%s' % (VENUE_NAME, ACT_NAME)
 from act_settings import *
 
 
-
+TEMPLATE_DIRS.insert(0, ACT_NAME + '/templates')
 TEMPLATE_DIRS.append('%s/instruments/local/templates' % VENUE_ROOT)
 TEMPLATE_DIRS.append('%s/instruments/local/templates/ads' % VENUE_ROOT)
 
