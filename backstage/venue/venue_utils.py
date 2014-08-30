@@ -36,8 +36,9 @@ def create_venue_uwsgi_file(venue_base, venue_root, venue_name):
     return
 
 
-def new_venue(venue_name, venue_root):
-        """create a new backstage venue with the given name and located at the specified path"""
+def new_venue(venue_name, venue_root, requirements_txt = None):
+        """create a new backstage venue with the given name and located at the specified path.
+        Optionally supply a valid requirements.txt file with which to populate the virtual environment"""
         venue_home = os.path.abspath(os.path.join(venue_root, venue_name))
         try:
             os.makedirs(venue_home)
@@ -71,7 +72,7 @@ def new_venue(venue_name, venue_root):
         except:
             raise
 
-        venue.build_virtualenv()
+        venue.build_virtualenv(requirements_txt)
         s = 'Successfully created Backstage venue %s at %s' % (venue.venue_name, venue.venue_root)
         print s
         return venue
