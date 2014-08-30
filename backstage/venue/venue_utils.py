@@ -40,10 +40,28 @@ def new_venue(venue_name, venue_root, requirements_txt = None):
         """create a new backstage venue with the given name and located at the specified path.
         Optionally supply a valid requirements.txt file with which to populate the virtual environment"""
         venue_home = os.path.abspath(os.path.join(venue_root, venue_name))
+
+        if requirements_txt is not None:
+            try:
+                fn = os.path.split(requirements_txt)[1]
+                if not fn.startswith('requirements') or not fn.endswith('.txt'):
+                    print 'Invalid Filename: %s' % fn
+                    raise
+                try:
+                    f = open(requirements_txt)
+                    f.close()
+                except IOError:
+                    print 'IO Error (hint: check for file)'
+                    raise
+            except:
+                print 'Could not create venue'
+                raise
+                return None
+
         try:
             os.makedirs(venue_home)
         except:
-            print 'Error creating venue.'
+            print 'Error creating venue (hint: check write access).'
             raise
 
         try:

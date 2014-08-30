@@ -109,15 +109,17 @@ class Venue():
         """build the virtual environment for this backstage venue.
         Optionally supply a valid requirements.txt
         """
-        if requirements_txt is None:    # this will revert to the default backstage version
-                requirements_txt = 'requirements.txt'
         cwd = os.getcwd()
         venvdir = os.path.join(self.venue_home, 'venv')
-        cmd = '%s/build_virtualenv %s' % (venvdir, requirements_txt)
+        if requirements_txt is None:    # this will revert to the default backstage version
+                requirements_txt = os.path.join(venvdir, 'requirements.txt')
+
+        cmd = '%s/build_virtualenv' % venvdir
+        arg = requirements_txt
         st = os.stat(cmd)
         os.chmod(cmd, st.st_mode | stat.S_IEXEC)
         os.chdir(venvdir)
-        subprocess.call(cmd)
+        subprocess.call([cmd, arg])
         os.chdir(cwd)
         return
 
